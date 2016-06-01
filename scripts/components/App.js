@@ -35,11 +35,25 @@ var App = React.createClass({
     });
   },
 
-  // adding & editing a todo
+  // todo actions
   addTodo : function(todo) {
     var timeStamp = (new Date()).getTime();
     this.state.todos['todo-' + timeStamp] = todo;
     this.setState({ todos : this.state.todos });
+  },
+
+  overdueTodo : function(key) {
+    this.state.todos[key].overdue = true;
+    this.setState({
+      todos : this.state.todos
+    });
+  },
+
+  deleteTodo : function(key) {
+    this.state.todos[key] = null;
+    this.setState({
+      todos : this.state.todos
+    });
   },
 
   // toggling the newTodoForm & editTodoForm
@@ -57,7 +71,7 @@ var App = React.createClass({
 
   // render functions
   renderTodo : function(key) {
-    return <Todo key={key} index={key} data={this.state.todos[key]} />
+    return <Todo key={key} index={key} data={this.state.todos[key]} overdueTodo={this.overdueTodo} deleteTodo={this.deleteTodo} />
   },
 
   render : function() {

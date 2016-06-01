@@ -13,8 +13,6 @@ var AddTodoForm = React.createClass({
   },
 
   componentDidUpdate : function() {
-    var form = this.refs;
-
     if(!this.state.init) {
       this.setTodaysDate();
     }
@@ -32,7 +30,6 @@ var AddTodoForm = React.createClass({
   },
 
   validateTitle : function() {
-    // validate title input
     var form = this.refs;
     var isTitleValid = (form.newTodoTitle.value === '' ? false : true);
 
