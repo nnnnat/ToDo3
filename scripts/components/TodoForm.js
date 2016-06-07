@@ -3,20 +3,76 @@ import ReactDOM from 'react-dom';
 import classSet from 'classnames';
 import h from '../helpers';
 
-var AddTodoForm = React.createClass({
+var TodoForm = React.createClass({
 
   getInitialState : function() {
     return {
       init : false,
+      edit : false,
       invalidTitle : false,
       invalidDate : false
     }
   },
 
   componentDidUpdate : function() {
-    if(!this.state.init) {
+    var form = this.refs;
+    ReactDOM.findDOMNode(form.todoForm).focus();
+
+    if(this.props.isActive && !this.state.init && this.props.editTodoId === null) {
+      console.log('New');
       this.setTodaysDate();
     }
+
+    if(this.props.isActive && !this.state.init && this.props.editTodoId != null) {
+      console.log('Edit');
+      this.setEditForm();
+    }
+  },
+
+  setTodaysDate : function() {
+    var form = this.refs;
+    var date = new Date();
+    var day = date.getUTCDate();
+    var year = date.getFullYear();
+    var month = date.getMonth()+1;
+
+    month = (month < 10 ? '0' + month : month);
+    day = (day < 10 ? '0' + day : day);
+
+    form.todoMonth.value = month;
+    form.todoDay.value = day;
+    form.todoYear.value = year;
+
+    this.setState({
+      init : true
+    });
+
+    //ReactDOM.findDOMNode(form.newTodoForm).focus();
+
+  },
+
+  setEditForm : function() {
+    var todo = this.props.todos[this.props.editTodoId];
+    var form = this.refs;
+    var date = new Date(todo.due_date);
+    var day = date.getDate()+1;
+    var year = date.getFullYear();
+    var month = date.getMonth()+1;
+    month = (month < 10 ? '0' + month : month);
+    day = (day < 10 ? '0' + day : day);
+
+    form.todoTitle.value = todo.title;
+
+    form.todoMonth.value = month;
+    form.todoDay.value = day;
+    form.todoYear.value = year;
+
+    this.setState({
+      init : true,
+      edit : true
+    });
+
+    //form.editTodoForm.getDOMNode().focus();
   },
 
   validateForm : function(event) {
@@ -26,13 +82,17 @@ var AddTodoForm = React.createClass({
 
     // if everything is valid submit this bad boi
     if(titleValid && dateValid) {
-      this.submitForm();
+      if(this.state.edit) {
+        this.submitEditedTodo();
+      }else {
+        this.submitNewTodo();
+      }
     }
   },
 
   validateTitle : function() {
     var form = this.refs;
-    var isTitleValid = (form.newTodoTitle.value === '' ? false : true);
+    var isTitleValid = (form.todoTitle.value === '' ? false : true);
 
     this.setState({
       invalidTitle : !isTitleValid
@@ -43,11 +103,12 @@ var AddTodoForm = React.createClass({
 
   validateDate : function() {
     var form = this.refs;
-    var dueDate = String(form.newTodoYear.value+'-'+form.newTodoMonth.value+'-'+form.newTodoDay.value);
+    var dueDate = String(form.todoYear.value+'-'+form.todoMonth.value+'-'+form.todoDay.value);
     var currentDate = new Date();
     dueDate = new Date(dueDate);
-    currentDate.setHours(0,0,0,0);
-    dueDate.setHours(0,0,0,0);
+
+    currentDate.setUTCHours(0,0,0,0);
+    dueDate.setUTCHours(0,0,0,0);
 
     var isDateValid = (currentDate.getTime() <= dueDate.getTime() ? true : false);
 
@@ -58,14 +119,14 @@ var AddTodoForm = React.createClass({
     return isDateValid;
   },
 
-  submitForm : function() {
+  submitNewTodo : function() {
     var form = this.refs;
     var createdDate = new Date();
-    var dueDate = String(form.newTodoYear.value+'-'+form.newTodoMonth.value+'-'+form.newTodoDay.value);
+    var dueDate = String(form.todoYear.value+'-'+form.todoMonth.value+'-'+form.todoDay.value);
     createdDate = h.uglyDate(String(createdDate));
 
     var todo = {
-      title : form.newTodoTitle.value,
+      title : form.todoTitle.value,
       due_date : dueDate,
       created_date : createdDate,
       overdue : false,
@@ -73,10 +134,25 @@ var AddTodoForm = React.createClass({
     }
 
     this.props.addTodo(todo);
-    this.cancelForm();
+    this.closeForm();
   },
 
-  cancelForm : function(event) {
+  submitEditedTodo : function() {
+    var form = this.refs;
+    var createdDate = new Date();
+    var dueDate = String(form.todoYear.value+'-'+form.todoMonth.value+'-'+form.todoDay.value);
+    createdDate = h.uglyDate(String(createdDate));
+
+    var editedTodo = {
+      title : form.todoTitle.value,
+      due_date : dueDate,
+    }
+
+    this.props.editTodo(editedTodo);
+    this.closeForm();
+  },
+
+  closeForm : function(event) {
     var form = this.refs;
     if(event) {
       event.preventDefault();
@@ -84,32 +160,13 @@ var AddTodoForm = React.createClass({
 
     this.setState({
       init : false,
+      edit : false,
       invalidTitle : false,
       invalidDate : false
     });
 
-    this.props.toggleNewTodoForm();
-    form.newTodoForm.reset();
-  },
-
-  setTodaysDate : function() {
-    var form = this.refs;
-    var date = new Date();
-    var day = date.getDate()+1;
-    var year = date.getFullYear();
-    var month = date.getMonth()+1;
-    month = (month < 10 ? '0' + month : month);
-    day = (day < 10 ? '0' + day : day);
-
-    form.newTodoMonth.value = month;
-    form.newTodoDay.value = day;
-    form.newTodoYear.value = year;
-
-    this.setState({
-      init : true
-    });
-
-    //ReactDOM.findDOMNode(form.newTodoForm).focus();
+    this.props.toggleTodoForm(null);
+    form.todoForm.reset();
   },
 
   render : function() {
@@ -139,14 +196,15 @@ var AddTodoForm = React.createClass({
       'active' : this.state.invalidDate
     });
 
+
     return (
       <section className={formClasses} aria-hidden={this.props.isActive} aria-expanded={this.props.isActive}>
-        <form className="todo-panel-form" ref="newTodoForm" id="todo-panel-form" tabindex="-1" aria-label="New Todo Form" onSubmit={this.validateForm}>
+        <form className="todo-panel-form" ref="todoForm" id="todo-panel-form" tabindex="-1" aria-label="New Todo Form" onSubmit={this.validateForm}>
           <label for="todo-title">
             ToDo:
           </label>
           <div className={titleError}><p>You forgot the title!</p></div>
-          <input onBlur={this.validateTitle} onChange={this.validateTitle} ref="newTodoTitle" id="todo-title" className={titleClasses} type="text" />
+          <input onBlur={this.validateTitle} onChange={this.validateTitle} ref="todoTitle" id="todo-title" className={titleClasses} type="text" />
 
           <fieldset>
             <legend>Due Date:</legend>
@@ -155,7 +213,7 @@ var AddTodoForm = React.createClass({
 
               <label for="todo-due-month">
                 <span className="text">Month</span>
-                <select onChange={this.validateDate} ref="newTodoMonth" name="todo due month" id="todo-due-month">
+                <select onChange={this.validateDate} ref="todoMonth" name="todo due month" id="todo-due-month">
                   <option value="01">Jan</option>
                   <option value="02">Feb</option>
                   <option value="03">Mar</option>
@@ -173,7 +231,7 @@ var AddTodoForm = React.createClass({
 
               <label for="todo-due-day">
                 <span className="text">Day</span>
-                <select onChange={this.validateDate} ref="newTodoDay" name="todo due day" id="todo-due-day">
+                <select onChange={this.validateDate} ref="todoDay" name="todo due day" id="todo-due-day">
                   <option value="01">1</option>
                   <option value="02">2</option>
                   <option value="03">3</option>
@@ -210,7 +268,7 @@ var AddTodoForm = React.createClass({
 
               <label for="todo-due-year">
                 <span className="text">Year</span>
-                <select onChange={this.validateDate} ref="newTodoYear" name="todo due year" id="todo-due-year">
+                <select onChange={this.validateDate} ref="todoYear" name="todo due year" id="todo-due-year">
                   <option value="2016">2016</option>
                   <option value="2017">2017</option>
                   <option value="2018">2018</option>
@@ -229,13 +287,14 @@ var AddTodoForm = React.createClass({
 
           <div className="button-group todo-panel-block">
             <button className="button button--primary invert" type="submit">Add</button>
-            <button className="button button--primary invert" onClick={this.cancelForm}>Cancel</button>
+            <button className="button button--primary invert" onClick={this.closeForm}>Cancel</button>
           </div>
         </form>
       </section>
     )
   }
 
+
 });
 
-export default AddTodoForm;
+export default TodoForm;

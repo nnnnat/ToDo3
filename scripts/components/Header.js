@@ -2,8 +2,8 @@ import React from 'react';
 
 var Header = React.createClass({
 
-  openAddTodoForm : function() {
-
+  openTodoForm : function() {
+    this.props.toggleTodoForm(null);
   },
 
   render : function() {
@@ -17,7 +17,7 @@ var Header = React.createClass({
           </h1>
         </div>
         <div className="header-block button-group">
-          <button className="button button--primary" onClick={this.props.toggleNewTodoForm}>New ToDo</button>
+          <button className="button button--primary" onClick={this.openTodoForm}>New ToDo</button>
           <button className="button button--primary" onClick={this.props.toggleTodosList}>{buttonText}</button>
         </div>
       </header>

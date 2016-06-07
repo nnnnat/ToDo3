@@ -7,7 +7,7 @@ var Footer = React.createClass({
     return (
       <footer>
         <div className="footer-copyright">
-          <p className="small">ToDo2 © 2016</p>
+          <p className="small">ToDo3 © 2016</p>
           <p className="small">Nat Hamilton</p>
         </div>
       </footer>

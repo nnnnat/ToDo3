@@ -4,7 +4,7 @@ let helpers = {
     var newDate = new Date(date);
     var months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
     var month = months[newDate.getMonth()];
-    var day = newDate.getDate()+1;
+    var day = newDate.getUTCDate();
     var year = newDate.getFullYear();
 
     newDate = String(month+' '+day+' '+year);

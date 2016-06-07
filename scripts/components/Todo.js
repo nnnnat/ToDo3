@@ -16,8 +16,8 @@ var Todo = React.createClass({
     var todo = this.props.data;
     var dueDate = new Date(todo.due_date);
     var currentDate = new Date();
-    currentDate.setHours(0,0,0,0);
-    dueDate.setHours(0,0,0,0);
+    currentDate.setUTCHours(0,0,0,0);
+    dueDate.setUTCHours(0,0,0,0);
 
     if (currentDate.getTime() > dueDate.getTime()) {
       this.props.overdueTodo(this.props.index);

@@ -1,5 +1,4 @@
 import React from 'react';
-import Catalyst from 'react-catalyst';
 import Rebase from 're-base';
 import CSSTransition from 'react-addons-css-transition-group';
 
@@ -7,21 +6,18 @@ import CSSTransition from 'react-addons-css-transition-group';
 import Header from './Header';
 import Todo from './Todo';
 import Footer from './Footer';
-import NewTodoForm from './NewTodoForm';
-import EditTodoForm from './EditTodoForm';
+import TodoForm from './TodoForm';
 
 var base = Rebase.createClass('https://todo33.firebaseio.com/');
 
 var App = React.createClass({
-  mixins : [Catalyst.LinkedStateMixin],
 
   getInitialState : function() {
     return {
       todos : {},
       complete : {},
-      newTodoFormActive : false,
-      editTodoFormActive : false,
       editTodoId : null,
+      todoFormActive : false,
       completeActive : false
     }
   },
@@ -51,6 +47,7 @@ var App = React.createClass({
     var todoId = this.state.editTodoId;
     this.state.todos[todoId].title = todo.title;
     this.state.todos[todoId].due_date = todo.due_date;
+    this.state.todos[todoId].overdue = false;
     this.setState({
       todos : this.state.todos
     });
@@ -111,17 +108,11 @@ var App = React.createClass({
     this.deleteTodo(key);
   },
 
-  // toggling the newTodoForm & editTodoForm
-  toggleNewTodoForm : function() {
-    this.setState({
-      newTodoFormActive : !this.state.newTodoFormActive
-    });
-  },
-
-  toggleEditTodoForm : function(key) {
+  // this opens and closes the Todo Form component
+  toggleTodoForm : function(key) {
     this.setState({
       editTodoId : key,
-      editTodoFormActive : !this.state.editTodoFormActive
+      todoFormActive : !this.state.todoFormActive
     });
   },
 
@@ -137,7 +128,7 @@ var App = React.createClass({
   renderTodo : function(key) {
     var data = (this.state.completeActive ? this.state.complete[key] : this.state.todos[key]);
 
-    return <Todo key={key} index={key} data={data} overdueTodo={this.overdueTodo} deleteTodo={this.deleteTodo} primaryActionTodo={this.primaryActionTodo} toggleEditTodoForm={this.toggleEditTodoForm} />
+    return <Todo key={key} index={key} data={data} overdueTodo={this.overdueTodo} deleteTodo={this.deleteTodo} primaryActionTodo={this.primaryActionTodo} toggleTodoForm={this.toggleTodoForm} />
   },
 
   render : function() {
@@ -145,7 +136,7 @@ var App = React.createClass({
 
     return (
       <div>
-        <Header toggleNewTodoForm={this.toggleNewTodoForm} toggleTodosList={this.toggleTodosList} completeActive={this.state.completeActive} />
+        <Header toggleTodoForm={this.toggleTodoForm} toggleTodosList={this.toggleTodosList} completeActive={this.state.completeActive} />
 
         <CSSTransition id="todo-list" className="todo-list" component="main" transitionName="todo-list" transitionEnterTimeout={2000} transitionLeaveTimeout={2000}>
 
@@ -155,9 +146,7 @@ var App = React.createClass({
 
         <Footer />
 
-        <NewTodoForm isActive={this.state.newTodoFormActive} toggleNewTodoForm={this.toggleNewTodoForm} addTodo={this.addTodo} />
-
-        <EditTodoForm isActive={this.state.editTodoFormActive} editTodoId={this.state.editTodoId} todos={this.state.todos} toggleEditTodoForm={this.toggleEditTodoForm} editTodo={this.editTodo} />
+        <TodoForm isActive={this.state.todoFormActive} editTodoId={this.state.editTodoId} todos={this.state.todos} toggleTodoForm={this.toggleTodoForm} editTodo={this.editTodo} addTodo={this.addTodo} />
 
         <button className="button button--primary" onClick={this.loadSamples}>Load Sample Data</button>
       </div>
