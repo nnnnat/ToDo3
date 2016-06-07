@@ -124,6 +124,14 @@ var App = React.createClass({
     });
   },
 
+  // sorting datalsit
+  // sortDataList : function(key) {
+  //   var tempArr = new Array();
+  //   tempArr.push(this.state.todos[key]);
+
+  //   return tempArr;
+  // },
+
   // render functions
   renderTodo : function(key) {
     var data = (this.state.completeActive ? this.state.complete[key] : this.state.todos[key]);
