@@ -1,9 +1,8 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 import classSet from 'classnames';
 import h from '../helpers';
 
-var AddTodoForm = React.createClass({
+var EditTodoForm = React.createClass({
 
   getInitialState : function() {
     return {
@@ -14,8 +13,9 @@ var AddTodoForm = React.createClass({
   },
 
   componentDidUpdate : function() {
-    if(!this.state.init) {
-      this.setTodaysDate();
+
+    if(this.props.editTodoId != null && !this.state.init) {
+      this.setForm();
     }
   },
 
@@ -32,7 +32,7 @@ var AddTodoForm = React.createClass({
 
   validateTitle : function() {
     var form = this.refs;
-    var isTitleValid = (form.newTodoTitle.value === '' ? false : true);
+    var isTitleValid = (form.editTodoTitle.value === '' ? false : true);
 
     this.setState({
       invalidTitle : !isTitleValid
@@ -43,7 +43,7 @@ var AddTodoForm = React.createClass({
 
   validateDate : function() {
     var form = this.refs;
-    var dueDate = String(form.newTodoYear.value+'-'+form.newTodoMonth.value+'-'+form.newTodoDay.value);
+    var dueDate = String(form.editTodoYear.value+'-'+form.editTodoMonth.value+'-'+form.editTodoDay.value);
     var currentDate = new Date();
     dueDate = new Date(dueDate);
     currentDate.setHours(0,0,0,0);
@@ -61,18 +61,15 @@ var AddTodoForm = React.createClass({
   submitForm : function() {
     var form = this.refs;
     var createdDate = new Date();
-    var dueDate = String(form.newTodoYear.value+'-'+form.newTodoMonth.value+'-'+form.newTodoDay.value);
+    var dueDate = String(form.editTodoYear.value+'-'+form.editTodoMonth.value+'-'+form.editTodoDay.value);
     createdDate = h.uglyDate(String(createdDate));
 
-    var todo = {
-      title : form.newTodoTitle.value,
+    var editedTodo = {
+      title : form.editTodoTitle.value,
       due_date : dueDate,
-      created_date : createdDate,
-      overdue : false,
-      complete : false
     }
 
-    this.props.addTodo(todo);
+    this.props.editTodo(editedTodo);
     this.cancelForm();
   },
 
@@ -88,31 +85,35 @@ var AddTodoForm = React.createClass({
       invalidDate : false
     });
 
-    this.props.toggleNewTodoForm();
-    form.newTodoForm.reset();
+    this.props.toggleEditTodoForm();
+    form.editTodoForm.reset();
   },
 
-  setTodaysDate : function() {
+  setForm : function() {
+    var todo = this.props.todos[this.props.editTodoId];
     var form = this.refs;
-    var date = new Date();
+    var date = new Date(todo.due_date);
     var day = date.getDate()+1;
     var year = date.getFullYear();
     var month = date.getMonth()+1;
     month = (month < 10 ? '0' + month : month);
     day = (day < 10 ? '0' + day : day);
 
-    form.newTodoMonth.value = month;
-    form.newTodoDay.value = day;
-    form.newTodoYear.value = year;
+    form.editTodoTitle.value = todo.title;
+
+    form.editTodoMonth.value = month;
+    form.editTodoDay.value = day;
+    form.editTodoYear.value = year;
 
     this.setState({
-      init : true
+      init : true,
     });
 
-    //ReactDOM.findDOMNode(form.newTodoForm).focus();
+    //form.editTodoForm.getDOMNode().focus();
   },
 
   render : function() {
+    var linkState = this.props.linkState;
     var formClasses = classSet({
       'todo-panel' : true,
       'active' : this.props.isActive
@@ -141,12 +142,12 @@ var AddTodoForm = React.createClass({
 
     return (
       <section className={formClasses} aria-hidden={this.props.isActive} aria-expanded={this.props.isActive}>
-        <form className="todo-panel-form" ref="newTodoForm" id="todo-panel-form" tabindex="-1" aria-label="New Todo Form" onSubmit={this.validateForm}>
+        <form className="todo-panel-form" ref="editTodoForm" id="todo-panel-form" tabindex="-1" aria-label="New Todo Form" onSubmit={this.validateForm}>
           <label for="todo-title">
             ToDo:
           </label>
           <div className={titleError}><p>You forgot the title!</p></div>
-          <input onBlur={this.validateTitle} onChange={this.validateTitle} ref="newTodoTitle" id="todo-title" className={titleClasses} type="text" />
+          <input onBlur={this.validateTitle} onChange={this.validateTitle} ref="editTodoTitle" id="todo-title" className={titleClasses} type="text" />
 
           <fieldset>
             <legend>Due Date:</legend>
@@ -155,7 +156,7 @@ var AddTodoForm = React.createClass({
 
               <label for="todo-due-month">
                 <span className="text">Month</span>
-                <select onChange={this.validateDate} ref="newTodoMonth" name="todo due month" id="todo-due-month">
+                <select onChange={this.validateDate} ref="editTodoMonth" name="todo due month" id="todo-due-month">
                   <option value="01">Jan</option>
                   <option value="02">Feb</option>
                   <option value="03">Mar</option>
@@ -173,7 +174,7 @@ var AddTodoForm = React.createClass({
 
               <label for="todo-due-day">
                 <span className="text">Day</span>
-                <select onChange={this.validateDate} ref="newTodoDay" name="todo due day" id="todo-due-day">
+                <select onChange={this.validateDate} ref="editTodoDay" name="todo due day" id="todo-due-day">
                   <option value="01">1</option>
                   <option value="02">2</option>
                   <option value="03">3</option>
@@ -210,7 +211,7 @@ var AddTodoForm = React.createClass({
 
               <label for="todo-due-year">
                 <span className="text">Year</span>
-                <select onChange={this.validateDate} ref="newTodoYear" name="todo due year" id="todo-due-year">
+                <select onChange={this.validateDate} ref="editTodoYear" name="todo due year" id="todo-due-year">
                   <option value="2016">2016</option>
                   <option value="2017">2017</option>
                   <option value="2018">2018</option>
@@ -235,7 +236,6 @@ var AddTodoForm = React.createClass({
       </section>
     )
   }
-
 });
 
-export default AddTodoForm;
+export default EditTodoForm;

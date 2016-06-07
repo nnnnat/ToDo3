@@ -7,6 +7,8 @@ var Header = React.createClass({
   },
 
   render : function() {
+    var buttonText = (this.props.completeActive ? 'View Upcoming' : 'View Completed');
+
     return (
       <header>
         <div className="header-block">
@@ -16,7 +18,7 @@ var Header = React.createClass({
         </div>
         <div className="header-block button-group">
           <button className="button button--primary" onClick={this.props.toggleNewTodoForm}>New ToDo</button>
-          <button className="button button--primary js-load-completed-todo">Completed ToDos</button>
+          <button className="button button--primary" onClick={this.props.toggleTodosList}>{buttonText}</button>
         </div>
       </header>
     )

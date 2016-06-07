@@ -5,7 +5,11 @@ import h from '../helpers';
 var Todo = React.createClass({
 
   componentWillMount : function() {
-    this.overdue();
+    var todo = this.props.data;
+
+    if(!todo.complete && !todo.overdue) {
+      this.overdue();
+    }
   },
 
   overdue : function() {
@@ -25,6 +29,26 @@ var Todo = React.createClass({
     this.props.deleteTodo(todoId);
   },
 
+  // undo : function() {
+  //   var todoId = this.props.index;
+  //   this.props.undoCompleteTodo(todoId);
+  // },
+
+  // done : function() {
+  //   var todoId = this.props.index;
+  //   this.props.completeTodo(this.props.index);
+  // },
+
+  priamryAction : function() {
+    var todoId = this.props.index;
+    this.props.primaryActionTodo(todoId)
+  },
+
+  edit : function() {
+    var todoId = this.props.index;
+    this.props.toggleEditTodoForm(todoId);
+  },
+
   render : function() {
     var todo = this.props.data;
     var overdueClasses = classSet({
@@ -32,6 +56,20 @@ var Todo = React.createClass({
       'message--urgent' : true,
       'active' : todo.overdue
     });
+
+    if(todo.complete) {
+      return (
+        <div tabindex="0" className="todo complete blue">
+          <div className="todo-info">
+            <h2 className="todo-info__title">Due: <span className="text">{h.prettyDate(todo.due_date)}</span></h2>
+            <h3 className="todo-info__title">{todo.title}</h3>
+          </div>
+          <div className="todo-primary-action">
+            <button className="button button--primary button--large" onClick={this.priamryAction}>Undo</button>
+          </div>
+        </div>
+      )
+    }
 
     return (
 
@@ -44,12 +82,12 @@ var Todo = React.createClass({
           <h3 className="todo-info__title">{todo.title}</h3>
 
           <div className="todo-button-group button-group">
-            <button className="button button--secondary">Edit</button>
-            <button className="button button--secondary" onClick={this.props.deleteTodo.bind(null, this.props.index)}>Delete</button>
+            <button className="button button--secondary" onClick={this.edit} >Edit</button>
+            <button className="button button--secondary" onClick={this.remove}>Delete</button>
           </div>
         </div>
         <div className="todo-primary-action">
-          <button className="button button--primary button--large">Done</button>
+          <button className="button button--primary button--large" onClick={this.priamryAction}>Done</button>
         </div>
       </div>
 

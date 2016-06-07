@@ -25,7 +25,8 @@ Block Styles:
 .todo {
   @include todoTheme;
   @include transition(transform $macroTransition $macroEase, opacity $macroTransition $macroEase);
-  @include staggerTransition(6, $delay, $delay/2);
+  @include transition(transform $macroTransition $macroEase, opacity $macroTransition $macroEase);
+  @include staggerTransition(100, $delay, $delay/2);
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
@@ -34,6 +35,7 @@ Block Styles:
   margin: 0 0 ms(2);
   max-height: 30em;
   overflow: hidden;
+  transform: translate3d(0,0,0);
   width: 100%;
 
   @include breakPoint(sm) {
@@ -47,12 +49,22 @@ Block Styles:
 
   &.todo-list-enter {
     opacity: 0;
-    transform: translateY(-15%);
+    transform: translateX(-15%);
   }
 
   &.todo-list-enter-active {
     opacity: 1;
-    transform: translateY(0%);
+    transform: translateX(0%);
+  }
+
+  &.todo-list-leave {
+    opacity: 1;
+    transform: translateX(0%);
+  }
+
+  &.todo-list-leave-active {
+    opacity: 0;
+    transform: translateX(15%);
   }
 
   &-info {
