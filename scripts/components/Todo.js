@@ -4,6 +4,14 @@ import h from '../helpers';
 
 var Todo = React.createClass({
 
+  propTypes : {
+    data : React.PropTypes.object.isRequired,
+    toggleTodoForm : React.PropTypes.func.isRequired,
+    deleteTodo : React.PropTypes.func.isRequired,
+    overdueTodo : React.PropTypes.func.isRequired,
+    primaryActionTodo : React.PropTypes.func.isRequired
+  },
+
   componentWillMount : function() {
     var todo = this.props.data;
 

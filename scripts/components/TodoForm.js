@@ -5,6 +5,15 @@ import h from '../helpers';
 
 var TodoForm = React.createClass({
 
+  propTypes : {
+    isActive : React.PropTypes.bool.isRequired,
+    editTodoId : React.PropTypes.bool,
+    todos : React.PropTypes.object.isRequired,
+    toggleTodoForm : React.PropTypes.func.isRequired,
+    editTodo : React.PropTypes.func.isRequired,
+    addTodo : React.PropTypes.func.isRequired
+  },
+
   getInitialState : function() {
     return {
       init : false,
@@ -16,15 +25,14 @@ var TodoForm = React.createClass({
 
   componentDidUpdate : function() {
     var form = this.refs;
-    ReactDOM.findDOMNode(form.todoForm).focus();
 
     if(this.props.isActive && !this.state.init && this.props.editTodoId === null) {
-      console.log('New');
+      ReactDOM.findDOMNode(form.todoTitle).focus();
       this.setTodaysDate();
     }
 
     if(this.props.isActive && !this.state.init && this.props.editTodoId != null) {
-      console.log('Edit');
+      ReactDOM.findDOMNode(form.todoTitle).focus();
       this.setEditForm();
     }
   },
@@ -46,9 +54,6 @@ var TodoForm = React.createClass({
     this.setState({
       init : true
     });
-
-    //ReactDOM.findDOMNode(form.newTodoForm).focus();
-
   },
 
   setEditForm : function() {
@@ -71,8 +76,6 @@ var TodoForm = React.createClass({
       init : true,
       edit : true
     });
-
-    //form.editTodoForm.getDOMNode().focus();
   },
 
   validateForm : function(event) {
@@ -186,7 +189,7 @@ var TodoForm = React.createClass({
     });
 
     var dateClasses = classSet({
-      'todo-panel-due-date' : true,
+      'todo-due-date' : true,
       'error' : this.state.invalidDate
     });
 
@@ -199,7 +202,7 @@ var TodoForm = React.createClass({
 
     return (
       <section className={formClasses} aria-hidden={this.props.isActive} aria-expanded={this.props.isActive}>
-        <form className="todo-panel-form" ref="todoForm" id="todo-panel-form" tabindex="-1" aria-label="New Todo Form" onSubmit={this.validateForm}>
+        <form className="todo-form" ref="todoForm" id="todo-form" tabindex="1" aria-label="New Todo Form" onSubmit={this.validateForm} autocomplete="off">
           <label for="todo-title">
             ToDo:
           </label>
@@ -285,7 +288,7 @@ var TodoForm = React.createClass({
             </div>
           </fieldset>
 
-          <div className="button-group todo-panel-block">
+          <div className="button-group todo-block">
             <button className="button button--primary invert" type="submit">Add</button>
             <button className="button button--primary invert" onClick={this.closeForm}>Cancel</button>
           </div>

@@ -53,7 +53,11 @@ gulp.task('browser-sync', function() {
         // we need to disable clicks and forms for when we test multiple rooms
         server : {},
         middleware : [ historyApiFallback() ],
-        ghostMode: true
+        ghostMode: {
+            clicks: false,
+            forms: false,
+            scroll: false
+        }
     });
 });
 

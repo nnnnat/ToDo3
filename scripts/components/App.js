@@ -144,11 +144,12 @@ var App = React.createClass({
 
         </CSSTransition>
 
+        <button className="button button--primary" onClick={this.loadSamples}>Load Sample Data</button>
+
         <Footer />
 
         <TodoForm isActive={this.state.todoFormActive} editTodoId={this.state.editTodoId} todos={this.state.todos} toggleTodoForm={this.toggleTodoForm} editTodo={this.editTodo} addTodo={this.addTodo} />
 
-        <button className="button button--primary" onClick={this.loadSamples}>Load Sample Data</button>
       </div>
     )
   },

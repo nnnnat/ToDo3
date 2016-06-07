@@ -2,6 +2,10 @@ import React from 'react';
 
 var Header = React.createClass({
 
+  propTypes : {
+    toggleTodoForm : React.PropTypes.func.isRequired
+  },
+
   openTodoForm : function() {
     this.props.toggleTodoForm(null);
   },

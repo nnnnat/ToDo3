@@ -125,7 +125,7 @@ li {
     color: #ffffff;
     padding: 1em; }
     .button--primary:hover, .button--primary:focus {
-      background-color: #4d4d4d; }
+      background-color: #616161; }
     .button--primary.invert {
       background-color: #111111;
       border: 2px solid #ffffff;
@@ -654,7 +654,7 @@ Block Styles:
     padding: 0.59172em;
     text-align: center; }
 
-.todo-panel-due-date {
+.todo-due-date {
   display: -ms-flexbox;
   display: flex;
   -ms-flex-direction: row;
@@ -663,19 +663,19 @@ Block Styles:
       justify-content: space-around;
   margin: 0 0 2.8561em;
   width: 100%; }
-  .todo-panel-due-date.error {
+  .todo-due-date.error {
     background: #e91f00; }
-  .todo-panel-due-date label {
+  .todo-due-date label {
     font-size: 1.3em;
     position: relative;
     width: calc(100% - 6em);
     z-index: 100; }
-    .todo-panel-due-date label[for="todo-due-day"] {
+    .todo-due-date label[for="todo-due-day"] {
       width: 6em; }
-    .todo-panel-due-date label .text {
+    .todo-due-date label .text {
       display: block;
       margin: 0 0 0.35013em; }
-  .todo-panel-due-date label:before {
+  .todo-due-date label:before {
     border-style: solid;
     border-width: .25em .25em 0 .25em;
     border-color: #111111 transparent transparent;
