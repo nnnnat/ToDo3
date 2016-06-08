@@ -37,24 +37,14 @@ var Todo = React.createClass({
     this.props.deleteTodo(todoId);
   },
 
-  // undo : function() {
-  //   var todoId = this.props.index;
-  //   this.props.undoCompleteTodo(todoId);
-  // },
-
-  // done : function() {
-  //   var todoId = this.props.index;
-  //   this.props.completeTodo(this.props.index);
-  // },
+  edit : function() {
+    var todoId = this.props.index;
+    this.props.toggleTodoForm(todoId);
+  },
 
   priamryAction : function() {
     var todoId = this.props.index;
     this.props.primaryActionTodo(todoId)
-  },
-
-  edit : function() {
-    var todoId = this.props.index;
-    this.props.toggleEditTodoForm(todoId);
   },
 
   render : function() {

@@ -7,7 +7,7 @@ var TodoForm = React.createClass({
 
   propTypes : {
     isActive : React.PropTypes.bool.isRequired,
-    editTodoId : React.PropTypes.bool,
+    editTodoId : React.PropTypes.string,
     todos : React.PropTypes.object.isRequired,
     toggleTodoForm : React.PropTypes.func.isRequired,
     editTodo : React.PropTypes.func.isRequired,
