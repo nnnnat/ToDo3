@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import classSet from 'classnames';
 import h from '../helpers';
 
-var TodoForm = React.createClass({
+const TodoForm = React.createClass({
 
   propTypes : {
     isActive : React.PropTypes.bool.isRequired,

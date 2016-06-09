@@ -1,6 +1,6 @@
 import React from 'react';
 
-var Footer = React.createClass({
+const Footer = React.createClass({
 
   render : function() {
     var year = new Date();

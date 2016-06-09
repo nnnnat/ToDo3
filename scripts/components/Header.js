@@ -1,6 +1,6 @@
 import React from 'react';
 
-var Header = React.createClass({
+const Header = React.createClass({
 
   propTypes : {
     toggleTodoForm : React.PropTypes.func.isRequired

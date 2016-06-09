@@ -1,6 +1,7 @@
 import React from 'react';
-import Rebase from 're-base';
 import CSSTransition from 'react-addons-css-transition-group';
+import Rebase from 're-base';
+
 
 // componenets
 import Header from './Header';
@@ -8,9 +9,9 @@ import Todo from './Todo';
 import Footer from './Footer';
 import TodoForm from './TodoForm';
 
-var base = Rebase.createClass('https://todo33.firebaseio.com/');
+const base = Rebase.createClass('https://todo33.firebaseio.com/');
 
-var App = React.createClass({
+const App = React.createClass({
 
   getInitialState : function() {
     return {

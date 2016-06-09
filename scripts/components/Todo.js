@@ -2,7 +2,7 @@ import React from 'react';
 import classSet from 'classnames';
 import h from '../helpers';
 
-var Todo = React.createClass({
+const Todo = React.createClass({
 
   propTypes : {
     data : React.PropTypes.object.isRequired,
