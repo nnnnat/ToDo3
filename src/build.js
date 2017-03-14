@@ -21689,8 +21689,6 @@ var _react2 = _interopRequireDefault(_react);
 
 var _reactDom = __webpack_require__(79);
 
-var _reactDom2 = _interopRequireDefault(_reactDom);
-
 var _App = __webpack_require__(184);
 
 var _App2 = _interopRequireDefault(_App);
@@ -21702,7 +21700,9 @@ var _main2 = _interopRequireDefault(_main);
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 // components
-_reactDom2.default.render(_react2.default.createElement(_App2.default, null), document.querySelector('#main'));
+// react junk
+var rootEl = document.querySelector('#root');
+(0, _reactDom.render)(_react2.default.createElement(_App2.default, null), rootEl);
 
 /***/ }),
 /* 178 */
@@ -22062,35 +22062,28 @@ function updateLink(linkElement, obj) {
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-var helpers = {
+exports.prettyDate = prettyDate;
+exports.uglyDate = uglyDate;
+function prettyDate(date) {
+  var newDate = new Date(date);
+  var months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+  var month = months[newDate.getMonth()];
+  var day = newDate.getUTCDate();
+  var year = newDate.getFullYear();
 
-  prettyDate: function prettyDate(date) {
-    var newDate = new Date(date);
-    var months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
-    var month = months[newDate.getMonth()];
-    var day = newDate.getUTCDate();
-    var year = newDate.getFullYear();
+  return month + ' ' + day + ' ' + year;
+}
 
-    newDate = String(month + ' ' + day + ' ' + year);
+function uglyDate(date) {
+  var newDate = new Date(date);
+  var year = newDate.getFullYear();
+  var day = newDate.getDate();
+  var month = newDate.getMonth() + 1;
 
-    return newDate;
-  },
-
-  uglyDate: function uglyDate(date) {
-    var newDate = new Date(date);
-    var day = newDate.getDate();
-    var year = newDate.getFullYear();
-    var month = newDate.getMonth() + 1;
-
-    month = month < 10 ? '0' + month : month;
-    day = day < 10 ? '0' + day : day;
-    newDate = String(year + '-' + month + '-' + day);
-
-    return newDate;
-  }
-};
-
-exports.default = helpers;
+  month = month < 10 ? '0' + month : month;
+  day = day < 10 ? '0' + day : day;
+  return year + '-' + month + '-' + day;
+}
 
 /***/ }),
 /* 183 */
@@ -22292,7 +22285,9 @@ var App = _react2.default.createClass({
   },
 
   // this opens and closes the Todo Form component
-  toggleTodoForm: function toggleTodoForm(key) {
+  toggleTodoForm: function toggleTodoForm() {
+    var key = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : null;
+
     this.setState({
       editTodoId: key,
       todoFormActive: !this.state.todoFormActive
@@ -22371,36 +22366,29 @@ var _react2 = _interopRequireDefault(_react);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var Footer = _react2.default.createClass({
-  displayName: "Footer",
+var Footer = function Footer(props) {
+  var year = new Date().getFullYear();
 
-
-  render: function render() {
-    var year = new Date();
-    year = year.getFullYear();
-
-    return _react2.default.createElement(
-      "footer",
-      null,
+  return _react2.default.createElement(
+    "footer",
+    null,
+    _react2.default.createElement(
+      "div",
+      { className: "footer-copyright" },
       _react2.default.createElement(
-        "div",
-        { className: "footer-copyright" },
-        _react2.default.createElement(
-          "p",
-          { className: "small" },
-          "ToDo3 \xA9 ",
-          year
-        ),
-        _react2.default.createElement(
-          "p",
-          { className: "small" },
-          "Nat Hamilton"
-        )
+        "p",
+        { className: "small" },
+        "ToDo3 \xA9 ",
+        year
+      ),
+      _react2.default.createElement(
+        "p",
+        { className: "small" },
+        "Nat Hamilton"
       )
-    );
-  }
-
-});
+    )
+  );
+};
 
 exports.default = Footer;
 
@@ -22421,51 +22409,41 @@ var _react2 = _interopRequireDefault(_react);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var Header = _react2.default.createClass({
-  displayName: 'Header',
+var Header = function Header(props) {
+  var buttonText = props.completeActive ? 'View Upcoming' : 'View Completed';
 
-
-  propTypes: {
-    toggleTodoForm: _react2.default.PropTypes.func.isRequired
-  },
-
-  openTodoForm: function openTodoForm() {
-    this.props.toggleTodoForm(null);
-  },
-
-  render: function render() {
-    var buttonText = this.props.completeActive ? 'View Upcoming' : 'View Completed';
-
-    return _react2.default.createElement(
-      'header',
-      null,
+  return _react2.default.createElement(
+    'header',
+    null,
+    _react2.default.createElement(
+      'div',
+      { className: 'header-block' },
       _react2.default.createElement(
-        'div',
-        { className: 'header-block' },
-        _react2.default.createElement(
-          'h1',
-          { className: 'header-block__logo' },
-          'ToDo3'
-        )
+        'h1',
+        { className: 'header-block__logo' },
+        'ToDo3'
+      )
+    ),
+    _react2.default.createElement(
+      'div',
+      { className: 'header-block button-group' },
+      _react2.default.createElement(
+        'button',
+        { className: 'button button--primary', onClick: props.toggleTodoForm },
+        'New ToDo'
       ),
       _react2.default.createElement(
-        'div',
-        { className: 'header-block button-group' },
-        _react2.default.createElement(
-          'button',
-          { className: 'button button--primary', onClick: this.openTodoForm },
-          'New ToDo'
-        ),
-        _react2.default.createElement(
-          'button',
-          { className: 'button button--primary', onClick: this.props.toggleTodosList },
-          buttonText
-        )
+        'button',
+        { className: 'button button--primary', onClick: props.toggleTodosList },
+        buttonText
       )
-    );
-  }
+    )
+  );
+};
 
-});
+// propTypes : {
+//   toggleTodoForm : React.PropTypes.func.isRequired
+// },
 
 exports.default = Header;
 
@@ -22490,7 +22468,9 @@ var _classnames2 = _interopRequireDefault(_classnames);
 
 var _helpers = __webpack_require__(182);
 
-var _helpers2 = _interopRequireDefault(_helpers);
+var h = _interopRequireWildcard(_helpers);
+
+function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj.default = obj; return newObj; } }
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -22563,7 +22543,7 @@ var Todo = _react2.default.createClass({
             _react2.default.createElement(
               'span',
               { className: 'text' },
-              _helpers2.default.prettyDate(todo.due_date)
+              h.prettyDate(todo.due_date)
             )
           ),
           _react2.default.createElement(
@@ -22606,7 +22586,7 @@ var Todo = _react2.default.createClass({
           _react2.default.createElement(
             'span',
             { className: 'text' },
-            _helpers2.default.prettyDate(todo.due_date)
+            h.prettyDate(todo.due_date)
           )
         ),
         _react2.default.createElement(
@@ -22670,7 +22650,9 @@ var _classnames2 = _interopRequireDefault(_classnames);
 
 var _helpers = __webpack_require__(182);
 
-var _helpers2 = _interopRequireDefault(_helpers);
+var h = _interopRequireWildcard(_helpers);
+
+function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj.default = obj; return newObj; } }
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -22799,7 +22781,7 @@ var TodoForm = _react2.default.createClass({
     var form = this.refs;
     var createdDate = new Date();
     var dueDate = String(form.todoYear.value + '-' + form.todoMonth.value + '-' + form.todoDay.value);
-    createdDate = _helpers2.default.uglyDate(String(createdDate));
+    createdDate = h.uglyDate(String(createdDate));
 
     var todo = {
       title: form.todoTitle.value,
@@ -22817,7 +22799,7 @@ var TodoForm = _react2.default.createClass({
     var form = this.refs;
     var createdDate = new Date();
     var dueDate = String(form.todoYear.value + '-' + form.todoMonth.value + '-' + form.todoDay.value);
-    createdDate = _helpers2.default.uglyDate(String(createdDate));
+    createdDate = h.uglyDate(String(createdDate));
 
     var editedTodo = {
       title: form.todoTitle.value,

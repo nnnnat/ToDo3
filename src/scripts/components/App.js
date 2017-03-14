@@ -110,7 +110,7 @@ const App = React.createClass({
   },
 
   // this opens and closes the Todo Form component
-  toggleTodoForm : function(key) {
+  toggleTodoForm : function(key = null) {
     this.setState({
       editTodoId : key,
       todoFormActive : !this.state.todoFormActive

@@ -1,6 +1,6 @@
 import React from 'react';
 import classSet from 'classnames';
-import h from '../helpers';
+import * as h from '../helpers';
 
 const Todo = React.createClass({
 

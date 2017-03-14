@@ -1,29 +1,20 @@
-let helpers = {
+export function prettyDate(date) {
+  const newDate = new Date(date);
+  const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+  const month = months[newDate.getMonth()];
+  const day = newDate.getUTCDate();
+  const year = newDate.getFullYear();
 
-  prettyDate : function(date) {
-    var newDate = new Date(date);
-    var months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
-    var month = months[newDate.getMonth()];
-    var day = newDate.getUTCDate();
-    var year = newDate.getFullYear();
+  return `${month} ${day} ${year}`;
+}
 
-    newDate = String(month+' '+day+' '+year);
+export function uglyDate(date) {
+  const newDate = new Date(date);
+  const year = newDate.getFullYear();
+  let day = newDate.getDate();
+  let month = newDate.getMonth()+1;
 
-    return newDate;
-  },
-
-  uglyDate : function(date) {
-    var newDate = new Date(date);
-    var day = newDate.getDate();
-    var year = newDate.getFullYear();
-    var month = newDate.getMonth()+1;
-
-    month = (month < 10 ? '0' + month : month);
-    day = (day < 10 ? '0' + day : day);
-    newDate = String(year+'-'+month+'-'+day);
-
-    return newDate;
-  }
-};
-
-export default helpers;
+  month = (month < 10 ? '0' + month : month);
+  day = (day < 10 ? '0' + day : day);
+  return `${year}-${month}-${day}`;
+}

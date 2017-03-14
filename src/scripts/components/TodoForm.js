@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import classSet from 'classnames';
-import h from '../helpers';
+import * as h from '../helpers';
 
 const TodoForm = React.createClass({
 
