@@ -13,7 +13,7 @@ const Footer = React.createClass({
           <p className="small">Nat Hamilton</p>
         </div>
       </footer>
-    )
+    );
   }
 
 });

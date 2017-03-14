@@ -6,7 +6,6 @@ Block Styles:
 // Header blocks
 // --------------------------------------------------------------------------------------------------------------------
 .header-block {
-
   &:first-of-type {
     margin: 0 0 ms(2);
 
@@ -33,7 +32,7 @@ Block Styles:
   height: auto;
   justify-content: space-between;
   margin: 0 0 ms(2);
-  max-height: 30em;
+  max-height: 30rem;
   overflow: hidden;
   transform: translate3d(0,0,0);
   width: 100%;
@@ -43,8 +42,8 @@ Block Styles:
   }
 
   @include breakPoint(md) {
-    max-height: 15em;
-    //min-height: 9.5rem;
+    max-height: 15rem;
+    //min-height: 9.5rrem;
   }
 
   &.todo-list-enter {
@@ -108,7 +107,7 @@ Block Styles:
 .message {
   @include transition(max-height $macroTransition $macroEase);
   height: auto;
-  max-height: 0em;
+  max-height: 0rem;
   overflow: hidden;
   visibility: hidden;
   width: 100%;
@@ -122,7 +121,7 @@ Block Styles:
   }
 
   &.active {
-    max-height: 5em;
+    max-height: 5rem;
     visibility: visible;
   }
 
@@ -156,11 +155,11 @@ Block Styles:
   label {
     font-size: ms(1);
     position: relative;
-    width: calc(100% - 6em);
+    width: calc(100% - 6rem);
     z-index: $z1;
 
     &[for="todo-due-day"] {
-      width: 6em;
+      width: 6rem;
     }
 
     .text {
@@ -171,9 +170,9 @@ Block Styles:
 
   label:before {
     border-style: solid;
-    border-width: .25em .25em 0 .25em;
+    border-width: .25rem .25rem 0 .25rem;
     border-color: $typeColor transparent transparent;
-    bottom: 1.2em;
+    bottom: 1.2rem;
     content: '';
     height: 0;
     position: absolute;

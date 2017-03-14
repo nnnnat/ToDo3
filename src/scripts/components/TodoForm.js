@@ -20,7 +20,7 @@ const TodoForm = React.createClass({
       edit : false,
       invalidTitle : false,
       invalidDate : false
-    }
+    };
   },
 
   componentDidUpdate : function() {
@@ -134,7 +134,7 @@ const TodoForm = React.createClass({
       created_date : createdDate,
       overdue : false,
       complete : false
-    }
+    };
 
     this.props.addTodo(todo);
     this.closeForm();
@@ -149,7 +149,7 @@ const TodoForm = React.createClass({
     var editedTodo = {
       title : form.todoTitle.value,
       due_date : dueDate,
-    }
+    };
 
     this.props.editTodo(editedTodo);
     this.closeForm();
@@ -294,7 +294,7 @@ const TodoForm = React.createClass({
           </div>
         </form>
       </section>
-    )
+    );
   }
 
 

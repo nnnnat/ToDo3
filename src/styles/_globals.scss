@@ -21,9 +21,7 @@ $typeColor: $dark;
 $highlight: $dark + 80;
 $urgent: $red;
 $sucess: $green;
-
 $colors: ('blue':$blue,'green':$green,'pink':$pink,'purple':$purple);
-/* end colors */
 
 /* type */
 // Inconsolata
@@ -34,16 +32,13 @@ $copy: 400;
 $headline: 700;
 $lineWeight: 2px;
 $scale: 1.3 !default;
-/* end type */
 
 /* grid setup */
 $columnAmount: 12;
-$gutterSize: 1em;
-/* end grid setup */
+$gutterSize: 1rem;
 
 /* border radius */
 $borderCurve: .25rem;
-/* end border radius */
 
 /* animations */
 // timing
@@ -54,7 +49,6 @@ $delay: .15s;
 //basic easing
 $macroEase: cubic-bezier(0.2, 0, 0.2, 1);
 $microEase: cubic-bezier(1.000, 0.000, 0.000, 1.000);
-/* end animations */
 
 /* z-index scale */
 $z1:   100;
@@ -67,7 +61,7 @@ $z7:   700;
 $z8:   800;
 $z9:   900;
 $z10: 1000;
-/* end z-index scale */
+
 // --------------------------------------------------------------------------------------------------------------------
 // End Varibles
 // --------------------------------------------------------------------------------------------------------------------
@@ -162,28 +156,16 @@ $dirs: t r b l;
 }
 
 // break point
-@mixin breakPoint($point) {
-  @if $point ==  xxl {
-    @media (min-width: 100em) { @content; }
+@mixin breakPoint($size) {
+  $width: 256px;
+  $points: xxs xs sm md lg xl xxl hd 4k 6k 8k;
+
+  @each $point in $points {
+    @if $point == $size {
+      @media (min-width: $width) { @content; }
+    }
+    $width: $width + 256;
   }
-  @else if $point == xl {
-    @media (min-width: 75em) { @content; }
-  }
-  @else if $point == lg {
-    @media (min-width: 60em) { @content; }
-  }
-  @else if $point == md {
-    @media (min-width: 50em) { @content; }
-  }
-  @else if $point == sm {
-    @media (min-width: 32em)  { @content; }
-  }
-  @else if $point == nm {
-    @media (max-width: 50em) { @content}
-  }
-  @else {
-   @content;
- }
 }
 
 // animation

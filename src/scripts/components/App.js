@@ -20,7 +20,7 @@ const App = React.createClass({
       editTodoId : null,
       todoFormActive : false,
       completeActive : false
-    }
+    };
   },
 
   componentDidMount : function() {
@@ -137,7 +137,7 @@ const App = React.createClass({
   renderTodo : function(key) {
     var data = (this.state.completeActive ? this.state.complete[key] : this.state.todos[key]);
 
-    return <Todo key={key} index={key} data={data} overdueTodo={this.overdueTodo} deleteTodo={this.deleteTodo} primaryActionTodo={this.primaryActionTodo} toggleTodoForm={this.toggleTodoForm} />
+    return <Todo key={key} index={key} data={data} overdueTodo={this.overdueTodo} deleteTodo={this.deleteTodo} primaryActionTodo={this.primaryActionTodo} toggleTodoForm={this.toggleTodoForm} />;
   },
 
   render : function() {
@@ -160,7 +160,7 @@ const App = React.createClass({
         <TodoForm isActive={this.state.todoFormActive} editTodoId={this.state.editTodoId} todos={this.state.todos} toggleTodoForm={this.toggleTodoForm} editTodo={this.editTodo} addTodo={this.addTodo} />
 
       </div>
-    )
+    );
   },
 
   loadSamples : function() {

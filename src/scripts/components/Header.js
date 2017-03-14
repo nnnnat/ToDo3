@@ -25,7 +25,7 @@ const Header = React.createClass({
           <button className="button button--primary" onClick={this.props.toggleTodosList}>{buttonText}</button>
         </div>
       </header>
-    )
+    );
   }
 
 });

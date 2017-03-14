@@ -24,6 +24,6 @@ let helpers = {
 
     return newDate;
   }
-}
+};
 
-export default helpers
+export default helpers;

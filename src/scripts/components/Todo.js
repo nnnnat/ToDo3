@@ -44,7 +44,7 @@ const Todo = React.createClass({
 
   priamryAction : function() {
     var todoId = this.props.index;
-    this.props.primaryActionTodo(todoId)
+    this.props.primaryActionTodo(todoId);
   },
 
   render : function() {
@@ -66,7 +66,7 @@ const Todo = React.createClass({
             <button className="button button--primary button--large" onClick={this.priamryAction}>Undo</button>
           </div>
         </div>
-      )
+      );
     }
 
     return (
@@ -89,7 +89,7 @@ const Todo = React.createClass({
         </div>
       </div>
 
-    )
+    );
   }
 
 });
