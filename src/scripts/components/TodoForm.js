@@ -202,8 +202,8 @@ const TodoForm = React.createClass({
 
     return (
       <section className={formClasses} aria-hidden={this.props.isActive} aria-expanded={this.props.isActive}>
-        <form className="todo-form" ref="todoForm" id="todo-form" tabindex="1" aria-label="New Todo Form" onSubmit={this.validateForm} autocomplete="off">
-          <label for="todo-title">
+        <form className="todo-form" ref="todoForm" id="todo-form" tabIndex="1" aria-label="New Todo Form" onSubmit={this.validateForm} autoComplete="off">
+          <label htmlFor="todo-title">
             ToDo:
           </label>
           <div className={titleError}><p>You forgot the title!</p></div>
@@ -214,7 +214,7 @@ const TodoForm = React.createClass({
             <div className={dateError}><p>Due dates must be a valid date in the future!</p></div>
             <div className={dateClasses} id="todo-due-date">
 
-              <label for="todo-due-month">
+              <label htmlFor="todo-due-month">
                 <span className="text">Month</span>
                 <select onChange={this.validateDate} ref="todoMonth" name="todo due month" id="todo-due-month">
                   <option value="01">Jan</option>
@@ -232,7 +232,7 @@ const TodoForm = React.createClass({
                 </select>
               </label>
 
-              <label for="todo-due-day">
+              <label htmlFor="todo-due-day">
                 <span className="text">Day</span>
                 <select onChange={this.validateDate} ref="todoDay" name="todo due day" id="todo-due-day">
                   <option value="01">1</option>
@@ -269,7 +269,7 @@ const TodoForm = React.createClass({
                 </select>
               </label>
 
-              <label for="todo-due-year">
+              <label htmlFor="todo-due-year">
                 <span className="text">Year</span>
                 <select onChange={this.validateDate} ref="todoYear" name="todo due year" id="todo-due-year">
                   <option value="2016">2016</option>

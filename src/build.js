@@ -21739,7 +21739,7 @@ exports = module.exports = __webpack_require__(180)();
 
 
 // module
-exports.push([module.i, "/*============================================================================================================================================================================================================================================\nMain:\n============================================================================================================================================================================================================================================*/\n/*============================================================================================================================================================================================================================================\nGlobals Styles:\n============================================================================================================================================================================================================================================*/\n/* colors */\n/* type */\n/* grid setup */\n/* border radius */\n/* animations */\n/* z-index scale */\n/*============================================================================================================================================================================================================================================\nBase Styles:\n============================================================================================================================================================================================================================================*/\nhtml, body, div, span, applet, object, iframe,\nh1, h2, h3, h4, h5, h6, p, blockquote, pre,\na, abbr, acronym, address, big, cite, code,\ndel, dfn, em, img, ins, kbd, q, s, samp,\nsmall, strike, strong, sub, sup, tt, var,\nb, u, i, center,\ndl, dt, dd, ol, ul, li,\nfieldset, form, label, legend,\ntable, caption, tbody, tfoot, thead, tr, th, td,\narticle, aside, canvas, details, embed,\nfigure, figcaption, footer, header, hgroup,\nmenu, nav, output, ruby, section, summary,\ntime, mark, audio, video {\n  margin: 0;\n  padding: 0;\n  border: 0;\n  font-size: 100%;\n  font: inherit;\n  vertical-align: baseline; }\n\narticle, aside, details, figcaption, figure,\nfooter, header, hgroup, menu, nav, section {\n  display: block; }\n\nbody {\n  line-height: 1; }\n\nol, ul {\n  list-style: none; }\n\nblockquote, q {\n  quotes: none; }\n\nblockquote:before, blockquote:after,\nq:before, q:after {\n  content: '';\n  content: none; }\n\ntable {\n  border-collapse: collapse;\n  border-spacing: 0; }\n\n*,\n*:before,\n*:after {\n  box-sizing: border-box; }\n\nbody {\n  color: #111111;\n  font-family: Helvetica, Arial, sans-serif;\n  font-size: 100%;\n  font-weight: 400;\n  line-height: 1.3; }\n  @media (min-width: 768px) {\n    body {\n      font-size: 110%; } }\n  @media (min-width: 1280px) {\n    body {\n      font-size: 120%; } }\n\nh1 {\n  font-size: 2.197rem;\n  font-weight: 700; }\n\nh2 {\n  font-size: 1.69rem;\n  font-weight: 700; }\n\nh3 {\n  font-size: 1.3rem; }\n\np,\nli {\n  font-size: 1.3rem; }\n  p b,\n  p strong, p.bold,\n  li b,\n  li strong,\n  li.bold {\n    font-weight: 700; }\n  p.small,\n  li.small {\n    font-size: 1rem; }\n\n.button {\n  -webkit-transition: background-color 0.3s cubic-bezier(0.2, 0, 0.2, 1), color 0.3s cubic-bezier(0.2, 0, 0.2, 1);\n  transition: background-color 0.3s cubic-bezier(0.2, 0, 0.2, 1), color 0.3s cubic-bezier(0.2, 0, 0.2, 1);\n  -webkit-transform: translate3d(0, 0, 0);\n  cursor: pointer;\n  font-size: 1rem;\n  font-weight: 700; }\n  @media (min-width: 768px) {\n    .button {\n      font-size: 0.76923rem; } }\n  .button-group .button:first-of-type {\n    margin: 0 1rem 0 0; }\n  .button--primary {\n    background-color: #111111;\n    border: 2px solid #111111;\n    color: #ffffff;\n    padding: 1rem; }\n    .button--primary:hover, .button--primary:focus {\n      background-color: #616161; }\n    .button--primary.invert {\n      background-color: #111111;\n      border: 2px solid #ffffff;\n      color: #ffffff; }\n      .button--primary.invert:hover, .button--primary.invert:focus {\n        background-color: #ffffff;\n        color: #111111; }\n  .button--secondary {\n    background-color: #ffffff;\n    border: none;\n    border-bottom: 2px solid #111111;\n    color: #111111;\n    margin-top: 1rem;\n    padding: 0; }\n    .button--secondary:hover, .button--secondary:focus {\n      background-color: #111111;\n      color: #ffffff; }\n  .button--large {\n    border: none;\n    font-size: 1rem;\n    height: auto;\n    margin: 0;\n    width: 100%; }\n\nform {\n  max-width: 40rem;\n  padding: 1.69rem;\n  width: 100%; }\n\nlabel,\nlegend {\n  cursor: pointer;\n  display: block;\n  font-size: 1.69rem;\n  font-weight: 700;\n  margin: 0 0 0.59172rem; }\n  label .text,\n  legend .text {\n    text-indent: 0.35013rem; }\n\ninput[type=text] {\n  -webkit-appearance: none;\n     -moz-appearance: none;\n          appearance: none;\n  background-color: #ffffff;\n  border: 2px solid #ffffff;\n  border-radius: 0;\n  color: #111111;\n  cursor: pointer;\n  font-size: 1.3rem;\n  margin: 0 0 1.69rem;\n  padding: 0.59172rem;\n  width: 100%; }\n  input[type=text].error {\n    border-color: #e91f00; }\n\nselect {\n  -webkit-appearance: none;\n     -moz-appearance: none;\n          appearance: none;\n  background-color: #ffffff;\n  border: 2px solid #111111;\n  border-radius: 0;\n  cursor: pointer;\n  color: #111111;\n  display: block;\n  font-size: 1rem;\n  margin: 0;\n  padding: 0.59172rem;\n  width: 100%; }\n\nbody {\n  background-color: #ffffff;\n  padding: 0 1rem; }\n  @media (min-width: 768px) {\n    body {\n      padding: 0 10%; } }\n  @media (min-width: 1536px) {\n    body {\n      padding: 0 20%; } }\n  body.lock {\n    height: 100%;\n    overflow: hidden;\n    position: absolute;\n    width: 100%; }\n\nheader {\n  -webkit-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-orient: vertical;\n  -webkit-box-direction: normal;\n      -ms-flex-direction: column;\n          flex-direction: column;\n  padding: 2.8561rem 0 1.69rem; }\n  @media (min-width: 1024px) {\n    header {\n      -webkit-box-orient: horizontal;\n      -webkit-box-direction: normal;\n          -ms-flex-direction: row;\n              flex-direction: row;\n      -webkit-box-pack: justify;\n          -ms-flex-pack: justify;\n              justify-content: space-between; } }\n\n.todo-list {\n  padding: 1.69rem 0 0; }\n\nfooter {\n  padding: 1.69rem 0 2.8561rem; }\n\n.todo-panel {\n  -webkit-transition: opacity 0.3s cubic-bezier(0.2, 0, 0.2, 1), -webkit-transform 0.3s cubic-bezier(0.2, 0, 0.2, 1) 0.1s;\n  transition: opacity 0.3s cubic-bezier(0.2, 0, 0.2, 1), -webkit-transform 0.3s cubic-bezier(0.2, 0, 0.2, 1) 0.1s;\n  transition: transform 0.3s cubic-bezier(0.2, 0, 0.2, 1) 0.1s, opacity 0.3s cubic-bezier(0.2, 0, 0.2, 1);\n  transition: transform 0.3s cubic-bezier(0.2, 0, 0.2, 1) 0.1s, opacity 0.3s cubic-bezier(0.2, 0, 0.2, 1), -webkit-transform 0.3s cubic-bezier(0.2, 0, 0.2, 1) 0.1s;\n  -webkit-transform: translate3d(0, 0, 0);\n  -webkit-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n  background: #111111;\n  color: #ffffff;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  height: 100vh;\n  -webkit-box-pack: center;\n      -ms-flex-pack: center;\n          justify-content: center;\n  left: 0;\n  opacity: 0;\n  position: fixed;\n  top: 0;\n  -webkit-transform: scale(0, 0);\n          transform: scale(0, 0);\n  width: 100vw; }\n  .todo-panel.active {\n    -webkit-transition: opacity 0.3s cubic-bezier(0.2, 0, 0.2, 1) 0.1s, -webkit-transform 0.3s cubic-bezier(0.2, 0, 0.2, 1);\n    transition: opacity 0.3s cubic-bezier(0.2, 0, 0.2, 1) 0.1s, -webkit-transform 0.3s cubic-bezier(0.2, 0, 0.2, 1);\n    transition: transform 0.3s cubic-bezier(0.2, 0, 0.2, 1), opacity 0.3s cubic-bezier(0.2, 0, 0.2, 1) 0.1s;\n    transition: transform 0.3s cubic-bezier(0.2, 0, 0.2, 1), opacity 0.3s cubic-bezier(0.2, 0, 0.2, 1) 0.1s, -webkit-transform 0.3s cubic-bezier(0.2, 0, 0.2, 1);\n    -webkit-transform: translate3d(0, 0, 0);\n    opacity: 1;\n    -webkit-transform: scale(1, 1);\n            transform: scale(1, 1); }\n\n.screen-reader {\n  border: 0;\n  -webkit-clip-path: rect(0, 0, 0, 0);\n          clip-path: rect(0, 0, 0, 0);\n  height: 1px;\n  margin: -1px;\n  overflow: hidden;\n  padding: 0;\n  position: absolute;\n  width: 1px; }\n\n::-moz-selection {\n  background: #111111;\n  /* WebKit/Blink Browsers */\n  color: #ffffff; }\n\n::selection {\n  background: #111111;\n  /* WebKit/Blink Browsers */\n  color: #ffffff; }\n\n::-moz-selection {\n  background: #111111;\n  /* Gecko Browsers */\n  color: #ffffff; }\n\n/*============================================================================================================================================================================================================================================\nBlock Styles:\n============================================================================================================================================================================================================================================*/\n.header-block:first-of-type {\n  margin: 0 0 1.69rem; }\n  @media (min-width: 1024px) {\n    .header-block:first-of-type {\n      margin: 0; } }\n\n.todo {\n  -webkit-transition: opacity 0.3s cubic-bezier(0.2, 0, 0.2, 1), -webkit-transform 0.3s cubic-bezier(0.2, 0, 0.2, 1);\n  transition: opacity 0.3s cubic-bezier(0.2, 0, 0.2, 1), -webkit-transform 0.3s cubic-bezier(0.2, 0, 0.2, 1);\n  transition: transform 0.3s cubic-bezier(0.2, 0, 0.2, 1), opacity 0.3s cubic-bezier(0.2, 0, 0.2, 1);\n  transition: transform 0.3s cubic-bezier(0.2, 0, 0.2, 1), opacity 0.3s cubic-bezier(0.2, 0, 0.2, 1), -webkit-transform 0.3s cubic-bezier(0.2, 0, 0.2, 1);\n  -webkit-transform: translate3d(0, 0, 0);\n  transition: transform 0.3s cubic-bezier(0.2, 0, 0.2, 1), opacity 0.3s cubic-bezier(0.2, 0, 0.2, 1);\n  -webkit-transform: translate3d(0, 0, 0);\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-orient: vertical;\n  -webkit-box-direction: normal;\n      -ms-flex-direction: column;\n          flex-direction: column;\n  -ms-flex-wrap: wrap;\n      flex-wrap: wrap;\n  height: auto;\n  -webkit-box-pack: justify;\n      -ms-flex-pack: justify;\n          justify-content: space-between;\n  margin: 0 0 1.69rem;\n  max-height: 30rem;\n  overflow: hidden;\n  transform: translate3d(0, 0, 0);\n  width: 100%; }\n  .todo.blue {\n    color: #0074D9; }\n    .todo.blue .todo-info {\n      border-color: #0074D9; }\n    .todo.blue .todo-primary-action {\n      border-color: #0074D9; }\n      @media (min-width: 768px) {\n        .todo.blue .todo-primary-action {\n          border-color: #0074D9; } }\n    .todo.blue .button.button--primary {\n      background-color: #0074D9; }\n      .todo.blue .button.button--primary:hover, .todo.blue .button.button--primary:focus {\n        background-color: #3cb0ff; }\n    .todo.blue .button.button--secondary {\n      border-color: #0074D9;\n      color: #0074D9; }\n      .todo.blue .button.button--secondary:hover, .todo.blue .button.button--secondary:focus {\n        background-color: #0074D9;\n        color: #ffffff; }\n  .todo.green {\n    color: #008957; }\n    .todo.green .todo-info {\n      border-color: #008957; }\n    .todo.green .todo-primary-action {\n      border-color: #008957; }\n      @media (min-width: 768px) {\n        .todo.green .todo-primary-action {\n          border-color: #008957; } }\n    .todo.green .button.button--primary {\n      background-color: #008957; }\n      .todo.green .button.button--primary:hover, .todo.green .button.button--primary:focus {\n        background-color: #3cc593; }\n    .todo.green .button.button--secondary {\n      border-color: #008957;\n      color: #008957; }\n      .todo.green .button.button--secondary:hover, .todo.green .button.button--secondary:focus {\n        background-color: #008957;\n        color: #ffffff; }\n  .todo.pink {\n    color: #dc00ad; }\n    .todo.pink .todo-info {\n      border-color: #dc00ad; }\n    .todo.pink .todo-primary-action {\n      border-color: #dc00ad; }\n      @media (min-width: 768px) {\n        .todo.pink .todo-primary-action {\n          border-color: #dc00ad; } }\n    .todo.pink .button.button--primary {\n      background-color: #dc00ad; }\n      .todo.pink .button.button--primary:hover, .todo.pink .button.button--primary:focus {\n        background-color: #ff3ce9; }\n    .todo.pink .button.button--secondary {\n      border-color: #dc00ad;\n      color: #dc00ad; }\n      .todo.pink .button.button--secondary:hover, .todo.pink .button.button--secondary:focus {\n        background-color: #dc00ad;\n        color: #ffffff; }\n  .todo.purple {\n    color: #B10DC9; }\n    .todo.purple .todo-info {\n      border-color: #B10DC9; }\n    .todo.purple .todo-primary-action {\n      border-color: #B10DC9; }\n      @media (min-width: 768px) {\n        .todo.purple .todo-primary-action {\n          border-color: #B10DC9; } }\n    .todo.purple .button.button--primary {\n      background-color: #B10DC9; }\n      .todo.purple .button.button--primary:hover, .todo.purple .button.button--primary:focus {\n        background-color: #ed49ff; }\n    .todo.purple .button.button--secondary {\n      border-color: #B10DC9;\n      color: #B10DC9; }\n      .todo.purple .button.button--secondary:hover, .todo.purple .button.button--secondary:focus {\n        background-color: #B10DC9;\n        color: #ffffff; }\n  .todo:nth-of-type(100) {\n    -webkit-transition-delay: 7.65s;\n            transition-delay: 7.65s; }\n  .todo:nth-of-type(99) {\n    -webkit-transition-delay: 7.575s;\n            transition-delay: 7.575s; }\n  .todo:nth-of-type(98) {\n    -webkit-transition-delay: 7.5s;\n            transition-delay: 7.5s; }\n  .todo:nth-of-type(97) {\n    -webkit-transition-delay: 7.425s;\n            transition-delay: 7.425s; }\n  .todo:nth-of-type(96) {\n    -webkit-transition-delay: 7.35s;\n            transition-delay: 7.35s; }\n  .todo:nth-of-type(95) {\n    -webkit-transition-delay: 7.275s;\n            transition-delay: 7.275s; }\n  .todo:nth-of-type(94) {\n    -webkit-transition-delay: 7.2s;\n            transition-delay: 7.2s; }\n  .todo:nth-of-type(93) {\n    -webkit-transition-delay: 7.125s;\n            transition-delay: 7.125s; }\n  .todo:nth-of-type(92) {\n    -webkit-transition-delay: 7.05s;\n            transition-delay: 7.05s; }\n  .todo:nth-of-type(91) {\n    -webkit-transition-delay: 6.975s;\n            transition-delay: 6.975s; }\n  .todo:nth-of-type(90) {\n    -webkit-transition-delay: 6.9s;\n            transition-delay: 6.9s; }\n  .todo:nth-of-type(89) {\n    -webkit-transition-delay: 6.825s;\n            transition-delay: 6.825s; }\n  .todo:nth-of-type(88) {\n    -webkit-transition-delay: 6.75s;\n            transition-delay: 6.75s; }\n  .todo:nth-of-type(87) {\n    -webkit-transition-delay: 6.675s;\n            transition-delay: 6.675s; }\n  .todo:nth-of-type(86) {\n    -webkit-transition-delay: 6.6s;\n            transition-delay: 6.6s; }\n  .todo:nth-of-type(85) {\n    -webkit-transition-delay: 6.525s;\n            transition-delay: 6.525s; }\n  .todo:nth-of-type(84) {\n    -webkit-transition-delay: 6.45s;\n            transition-delay: 6.45s; }\n  .todo:nth-of-type(83) {\n    -webkit-transition-delay: 6.375s;\n            transition-delay: 6.375s; }\n  .todo:nth-of-type(82) {\n    -webkit-transition-delay: 6.3s;\n            transition-delay: 6.3s; }\n  .todo:nth-of-type(81) {\n    -webkit-transition-delay: 6.225s;\n            transition-delay: 6.225s; }\n  .todo:nth-of-type(80) {\n    -webkit-transition-delay: 6.15s;\n            transition-delay: 6.15s; }\n  .todo:nth-of-type(79) {\n    -webkit-transition-delay: 6.075s;\n            transition-delay: 6.075s; }\n  .todo:nth-of-type(78) {\n    -webkit-transition-delay: 6s;\n            transition-delay: 6s; }\n  .todo:nth-of-type(77) {\n    -webkit-transition-delay: 5.925s;\n            transition-delay: 5.925s; }\n  .todo:nth-of-type(76) {\n    -webkit-transition-delay: 5.85s;\n            transition-delay: 5.85s; }\n  .todo:nth-of-type(75) {\n    -webkit-transition-delay: 5.775s;\n            transition-delay: 5.775s; }\n  .todo:nth-of-type(74) {\n    -webkit-transition-delay: 5.7s;\n            transition-delay: 5.7s; }\n  .todo:nth-of-type(73) {\n    -webkit-transition-delay: 5.625s;\n            transition-delay: 5.625s; }\n  .todo:nth-of-type(72) {\n    -webkit-transition-delay: 5.55s;\n            transition-delay: 5.55s; }\n  .todo:nth-of-type(71) {\n    -webkit-transition-delay: 5.475s;\n            transition-delay: 5.475s; }\n  .todo:nth-of-type(70) {\n    -webkit-transition-delay: 5.4s;\n            transition-delay: 5.4s; }\n  .todo:nth-of-type(69) {\n    -webkit-transition-delay: 5.325s;\n            transition-delay: 5.325s; }\n  .todo:nth-of-type(68) {\n    -webkit-transition-delay: 5.25s;\n            transition-delay: 5.25s; }\n  .todo:nth-of-type(67) {\n    -webkit-transition-delay: 5.175s;\n            transition-delay: 5.175s; }\n  .todo:nth-of-type(66) {\n    -webkit-transition-delay: 5.1s;\n            transition-delay: 5.1s; }\n  .todo:nth-of-type(65) {\n    -webkit-transition-delay: 5.025s;\n            transition-delay: 5.025s; }\n  .todo:nth-of-type(64) {\n    -webkit-transition-delay: 4.95s;\n            transition-delay: 4.95s; }\n  .todo:nth-of-type(63) {\n    -webkit-transition-delay: 4.875s;\n            transition-delay: 4.875s; }\n  .todo:nth-of-type(62) {\n    -webkit-transition-delay: 4.8s;\n            transition-delay: 4.8s; }\n  .todo:nth-of-type(61) {\n    -webkit-transition-delay: 4.725s;\n            transition-delay: 4.725s; }\n  .todo:nth-of-type(60) {\n    -webkit-transition-delay: 4.65s;\n            transition-delay: 4.65s; }\n  .todo:nth-of-type(59) {\n    -webkit-transition-delay: 4.575s;\n            transition-delay: 4.575s; }\n  .todo:nth-of-type(58) {\n    -webkit-transition-delay: 4.5s;\n            transition-delay: 4.5s; }\n  .todo:nth-of-type(57) {\n    -webkit-transition-delay: 4.425s;\n            transition-delay: 4.425s; }\n  .todo:nth-of-type(56) {\n    -webkit-transition-delay: 4.35s;\n            transition-delay: 4.35s; }\n  .todo:nth-of-type(55) {\n    -webkit-transition-delay: 4.275s;\n            transition-delay: 4.275s; }\n  .todo:nth-of-type(54) {\n    -webkit-transition-delay: 4.2s;\n            transition-delay: 4.2s; }\n  .todo:nth-of-type(53) {\n    -webkit-transition-delay: 4.125s;\n            transition-delay: 4.125s; }\n  .todo:nth-of-type(52) {\n    -webkit-transition-delay: 4.05s;\n            transition-delay: 4.05s; }\n  .todo:nth-of-type(51) {\n    -webkit-transition-delay: 3.975s;\n            transition-delay: 3.975s; }\n  .todo:nth-of-type(50) {\n    -webkit-transition-delay: 3.9s;\n            transition-delay: 3.9s; }\n  .todo:nth-of-type(49) {\n    -webkit-transition-delay: 3.825s;\n            transition-delay: 3.825s; }\n  .todo:nth-of-type(48) {\n    -webkit-transition-delay: 3.75s;\n            transition-delay: 3.75s; }\n  .todo:nth-of-type(47) {\n    -webkit-transition-delay: 3.675s;\n            transition-delay: 3.675s; }\n  .todo:nth-of-type(46) {\n    -webkit-transition-delay: 3.6s;\n            transition-delay: 3.6s; }\n  .todo:nth-of-type(45) {\n    -webkit-transition-delay: 3.525s;\n            transition-delay: 3.525s; }\n  .todo:nth-of-type(44) {\n    -webkit-transition-delay: 3.45s;\n            transition-delay: 3.45s; }\n  .todo:nth-of-type(43) {\n    -webkit-transition-delay: 3.375s;\n            transition-delay: 3.375s; }\n  .todo:nth-of-type(42) {\n    -webkit-transition-delay: 3.3s;\n            transition-delay: 3.3s; }\n  .todo:nth-of-type(41) {\n    -webkit-transition-delay: 3.225s;\n            transition-delay: 3.225s; }\n  .todo:nth-of-type(40) {\n    -webkit-transition-delay: 3.15s;\n            transition-delay: 3.15s; }\n  .todo:nth-of-type(39) {\n    -webkit-transition-delay: 3.075s;\n            transition-delay: 3.075s; }\n  .todo:nth-of-type(38) {\n    -webkit-transition-delay: 3s;\n            transition-delay: 3s; }\n  .todo:nth-of-type(37) {\n    -webkit-transition-delay: 2.925s;\n            transition-delay: 2.925s; }\n  .todo:nth-of-type(36) {\n    -webkit-transition-delay: 2.85s;\n            transition-delay: 2.85s; }\n  .todo:nth-of-type(35) {\n    -webkit-transition-delay: 2.775s;\n            transition-delay: 2.775s; }\n  .todo:nth-of-type(34) {\n    -webkit-transition-delay: 2.7s;\n            transition-delay: 2.7s; }\n  .todo:nth-of-type(33) {\n    -webkit-transition-delay: 2.625s;\n            transition-delay: 2.625s; }\n  .todo:nth-of-type(32) {\n    -webkit-transition-delay: 2.55s;\n            transition-delay: 2.55s; }\n  .todo:nth-of-type(31) {\n    -webkit-transition-delay: 2.475s;\n            transition-delay: 2.475s; }\n  .todo:nth-of-type(30) {\n    -webkit-transition-delay: 2.4s;\n            transition-delay: 2.4s; }\n  .todo:nth-of-type(29) {\n    -webkit-transition-delay: 2.325s;\n            transition-delay: 2.325s; }\n  .todo:nth-of-type(28) {\n    -webkit-transition-delay: 2.25s;\n            transition-delay: 2.25s; }\n  .todo:nth-of-type(27) {\n    -webkit-transition-delay: 2.175s;\n            transition-delay: 2.175s; }\n  .todo:nth-of-type(26) {\n    -webkit-transition-delay: 2.1s;\n            transition-delay: 2.1s; }\n  .todo:nth-of-type(25) {\n    -webkit-transition-delay: 2.025s;\n            transition-delay: 2.025s; }\n  .todo:nth-of-type(24) {\n    -webkit-transition-delay: 1.95s;\n            transition-delay: 1.95s; }\n  .todo:nth-of-type(23) {\n    -webkit-transition-delay: 1.875s;\n            transition-delay: 1.875s; }\n  .todo:nth-of-type(22) {\n    -webkit-transition-delay: 1.8s;\n            transition-delay: 1.8s; }\n  .todo:nth-of-type(21) {\n    -webkit-transition-delay: 1.725s;\n            transition-delay: 1.725s; }\n  .todo:nth-of-type(20) {\n    -webkit-transition-delay: 1.65s;\n            transition-delay: 1.65s; }\n  .todo:nth-of-type(19) {\n    -webkit-transition-delay: 1.575s;\n            transition-delay: 1.575s; }\n  .todo:nth-of-type(18) {\n    -webkit-transition-delay: 1.5s;\n            transition-delay: 1.5s; }\n  .todo:nth-of-type(17) {\n    -webkit-transition-delay: 1.425s;\n            transition-delay: 1.425s; }\n  .todo:nth-of-type(16) {\n    -webkit-transition-delay: 1.35s;\n            transition-delay: 1.35s; }\n  .todo:nth-of-type(15) {\n    -webkit-transition-delay: 1.275s;\n            transition-delay: 1.275s; }\n  .todo:nth-of-type(14) {\n    -webkit-transition-delay: 1.2s;\n            transition-delay: 1.2s; }\n  .todo:nth-of-type(13) {\n    -webkit-transition-delay: 1.125s;\n            transition-delay: 1.125s; }\n  .todo:nth-of-type(12) {\n    -webkit-transition-delay: 1.05s;\n            transition-delay: 1.05s; }\n  .todo:nth-of-type(11) {\n    -webkit-transition-delay: 0.975s;\n            transition-delay: 0.975s; }\n  .todo:nth-of-type(10) {\n    -webkit-transition-delay: 0.9s;\n            transition-delay: 0.9s; }\n  .todo:nth-of-type(9) {\n    -webkit-transition-delay: 0.825s;\n            transition-delay: 0.825s; }\n  .todo:nth-of-type(8) {\n    -webkit-transition-delay: 0.75s;\n            transition-delay: 0.75s; }\n  .todo:nth-of-type(7) {\n    -webkit-transition-delay: 0.675s;\n            transition-delay: 0.675s; }\n  .todo:nth-of-type(6) {\n    -webkit-transition-delay: 0.6s;\n            transition-delay: 0.6s; }\n  .todo:nth-of-type(5) {\n    -webkit-transition-delay: 0.525s;\n            transition-delay: 0.525s; }\n  .todo:nth-of-type(4) {\n    -webkit-transition-delay: 0.45s;\n            transition-delay: 0.45s; }\n  .todo:nth-of-type(3) {\n    -webkit-transition-delay: 0.375s;\n            transition-delay: 0.375s; }\n  .todo:nth-of-type(2) {\n    -webkit-transition-delay: 0.3s;\n            transition-delay: 0.3s; }\n  .todo:nth-of-type(1) {\n    -webkit-transition-delay: 0.225s;\n            transition-delay: 0.225s; }\n  @media (min-width: 768px) {\n    .todo {\n      -webkit-box-orient: horizontal;\n      -webkit-box-direction: normal;\n          -ms-flex-direction: row;\n              flex-direction: row; } }\n  @media (min-width: 1024px) {\n    .todo {\n      max-height: 15rem; } }\n  .todo.todo-list-enter {\n    opacity: 0;\n    -webkit-transform: translateX(-15%);\n            transform: translateX(-15%); }\n  .todo.todo-list-enter-active {\n    opacity: 1;\n    -webkit-transform: translateX(0%);\n            transform: translateX(0%); }\n  .todo.todo-list-leave {\n    opacity: 1;\n    -webkit-transform: translateX(0%);\n            transform: translateX(0%); }\n  .todo.todo-list-leave-active {\n    opacity: 0;\n    -webkit-transform: translateX(15%);\n            transform: translateX(15%); }\n  .todo-info {\n    border: 2px solid #111111;\n    padding: 1rem;\n    min-height: 1px;\n    width: 100%; }\n    @media (min-width: 768px) {\n      .todo-info {\n        width: 75%; } }\n    @media (min-width: 1280px) {\n      .todo-info {\n        width: 85%; } }\n  .todo-primary-action {\n    border: 2px solid #111111;\n    border-top: none;\n    display: -webkit-box;\n    display: -ms-flexbox;\n    display: flex; }\n    @media (min-width: 768px) {\n      .todo-primary-action {\n        border-top: 2px solid #111111;\n        border-left: none;\n        width: 25%; } }\n    @media (min-width: 1280px) {\n      .todo-primary-action {\n        width: 15%; } }\n\n.message {\n  -webkit-transition: max-height 0.3s cubic-bezier(0.2, 0, 0.2, 1);\n  transition: max-height 0.3s cubic-bezier(0.2, 0, 0.2, 1);\n  -webkit-transform: translate3d(0, 0, 0);\n  height: auto;\n  max-height: 0rem;\n  overflow: hidden;\n  visibility: hidden;\n  width: 100%; }\n  .message--urgent {\n    background: #e91f00; }\n  .message--sucess {\n    background: #008957; }\n  .message.active {\n    max-height: 5rem;\n    visibility: visible; }\n  .message p {\n    color: #ffffff;\n    display: block;\n    font-size: 1rem;\n    font-weight: 700;\n    padding: 0.59172rem;\n    text-align: center; }\n\n.todo-due-date {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-orient: horizontal;\n  -webkit-box-direction: normal;\n      -ms-flex-direction: row;\n          flex-direction: row;\n  -ms-flex-pack: distribute;\n      justify-content: space-around;\n  margin: 0 0 2.8561rem;\n  width: 100%; }\n  .todo-due-date.error {\n    background: #e91f00; }\n  .todo-due-date label {\n    font-size: 1.3rem;\n    position: relative;\n    width: calc(100% - 6rem);\n    z-index: 100; }\n    .todo-due-date label[for=\"todo-due-day\"] {\n      width: 6rem; }\n    .todo-due-date label .text {\n      display: block;\n      margin: 0 0 0.35013rem; }\n  .todo-due-date label:before {\n    border-style: solid;\n    border-width: .25rem .25rem 0 .25rem;\n    border-color: #111111 transparent transparent;\n    bottom: 1.2rem;\n    content: '';\n    height: 0;\n    position: absolute;\n    right: 8%;\n    width: 0; }\n\n.footer-copyright {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-pack: justify;\n      -ms-flex-pack: justify;\n          justify-content: space-between; }\n\n/*============================================================================================================================================================================================================================================\nElement Styles:\n============================================================================================================================================================================================================================================*/\n.header-block__logo {\n  font-size: 2.197rem;\n  font-weight: 700;\n  line-height: 1; }\n", ""]);
+exports.push([module.i, "/*============================================================================================================================================================================================================================================\nMain:\n============================================================================================================================================================================================================================================*/\n/*============================================================================================================================================================================================================================================\nGlobals Styles:\n============================================================================================================================================================================================================================================*/\n/* colors */\n/* type */\n/* grid setup */\n/* border radius */\n/* animations */\n/* z-index scale */\n/*============================================================================================================================================================================================================================================\nBase Styles:\n============================================================================================================================================================================================================================================*/\nhtml, body, div, span, applet, object, iframe,\nh1, h2, h3, h4, h5, h6, p, blockquote, pre,\na, abbr, acronym, address, big, cite, code,\ndel, dfn, em, img, ins, kbd, q, s, samp,\nsmall, strike, strong, sub, sup, tt, var,\nb, u, i, center,\ndl, dt, dd, ol, ul, li,\nfieldset, form, label, legend,\ntable, caption, tbody, tfoot, thead, tr, th, td,\narticle, aside, canvas, details, embed,\nfigure, figcaption, footer, header, hgroup,\nmenu, nav, output, ruby, section, summary,\ntime, mark, audio, video {\n  margin: 0;\n  padding: 0;\n  border: 0;\n  font-size: 100%;\n  font: inherit;\n  vertical-align: baseline; }\n\narticle, aside, details, figcaption, figure,\nfooter, header, hgroup, menu, nav, section {\n  display: block; }\n\nbody {\n  line-height: 1; }\n\nol, ul {\n  list-style: none; }\n\nblockquote, q {\n  quotes: none; }\n\nblockquote:before, blockquote:after,\nq:before, q:after {\n  content: '';\n  content: none; }\n\ntable {\n  border-collapse: collapse;\n  border-spacing: 0; }\n\n*,\n*:before,\n*:after {\n  box-sizing: border-box; }\n\nbody {\n  color: #111111;\n  font-family: Helvetica, Arial, sans-serif;\n  font-size: 100%;\n  font-weight: 400;\n  line-height: 1.5; }\n  @media (min-width: 768px) {\n    body {\n      font-size: 110%; } }\n  @media (min-width: 1280px) {\n    body {\n      font-size: 120%; } }\n\nh1 {\n  font-size: 3.375rem;\n  font-weight: 700; }\n\nh2 {\n  font-size: 2.25rem;\n  font-weight: 700; }\n\nh3 {\n  font-size: 1.5rem; }\n\np,\nli {\n  font-size: 1.5rem; }\n  p b,\n  p strong, p.bold,\n  li b,\n  li strong,\n  li.bold {\n    font-weight: 700; }\n  p.small,\n  li.small {\n    font-size: 1rem; }\n\n.button {\n  -webkit-transition: background-color 0.3s cubic-bezier(0.2, 0, 0.2, 1), color 0.3s cubic-bezier(0.2, 0, 0.2, 1);\n  transition: background-color 0.3s cubic-bezier(0.2, 0, 0.2, 1), color 0.3s cubic-bezier(0.2, 0, 0.2, 1);\n  -webkit-transform: translate3d(0, 0, 0);\n  cursor: pointer;\n  font-size: 1rem;\n  font-weight: 700; }\n  @media (min-width: 768px) {\n    .button {\n      font-size: 0.66667rem; } }\n  .button-group .button:first-of-type {\n    margin: 0 1rem 0 0; }\n  .button--primary {\n    background-color: #111111;\n    border: 2px solid #111111;\n    color: #ffffff;\n    padding: 1rem; }\n    .button--primary:hover, .button--primary:focus {\n      background-color: #616161; }\n    .button--primary.invert {\n      background-color: #111111;\n      border: 2px solid #ffffff;\n      color: #ffffff; }\n      .button--primary.invert:hover, .button--primary.invert:focus {\n        background-color: #ffffff;\n        color: #111111; }\n  .button--secondary {\n    background-color: #ffffff;\n    border: none;\n    border-bottom: 2px solid #111111;\n    color: #111111;\n    margin-top: 1rem;\n    padding: 0; }\n    .button--secondary:hover, .button--secondary:focus {\n      background-color: #111111;\n      color: #ffffff; }\n  .button--large {\n    border: none;\n    font-size: 1rem;\n    height: auto;\n    margin: 0;\n    width: 100%; }\n\nform {\n  max-width: 40rem;\n  padding: 2.25rem;\n  width: 100%; }\n\nlabel,\nlegend {\n  cursor: pointer;\n  display: block;\n  font-size: 2.25rem;\n  font-weight: 700;\n  margin: 0 0 0.44444rem; }\n  label .text,\n  legend .text {\n    text-indent: 0.19753rem; }\n\ninput[type=text] {\n  -webkit-appearance: none;\n     -moz-appearance: none;\n          appearance: none;\n  background-color: #ffffff;\n  border: 2px solid #ffffff;\n  border-radius: 0;\n  color: #111111;\n  cursor: pointer;\n  font-size: 1.5rem;\n  margin: 0 0 2.25rem;\n  padding: 0.44444rem;\n  width: 100%; }\n  input[type=text].error {\n    border-color: #e91f00; }\n\nselect {\n  -webkit-appearance: none;\n     -moz-appearance: none;\n          appearance: none;\n  background-color: #ffffff;\n  border: 2px solid #111111;\n  border-radius: 0;\n  cursor: pointer;\n  color: #111111;\n  display: block;\n  font-size: 1rem;\n  margin: 0;\n  padding: 0.44444rem;\n  width: 100%; }\n\nbody {\n  background-color: #ffffff;\n  padding: 0 1rem; }\n  @media (min-width: 768px) {\n    body {\n      padding: 0 10%; } }\n  @media (min-width: 1536px) {\n    body {\n      padding: 0 20%; } }\n  body.lock {\n    height: 100%;\n    overflow: hidden;\n    position: absolute;\n    width: 100%; }\n\nheader {\n  -webkit-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-orient: vertical;\n  -webkit-box-direction: normal;\n      -ms-flex-direction: column;\n          flex-direction: column;\n  padding: 5.0625rem 0 2.25rem; }\n  @media (min-width: 1024px) {\n    header {\n      -webkit-box-orient: horizontal;\n      -webkit-box-direction: normal;\n          -ms-flex-direction: row;\n              flex-direction: row;\n      -webkit-box-pack: justify;\n          -ms-flex-pack: justify;\n              justify-content: space-between; } }\n\n.todo-list {\n  padding: 2.25rem 0 0; }\n\nfooter {\n  padding: 2.25rem 0 5.0625rem; }\n\n.todo-panel {\n  -webkit-transition: opacity 0.3s cubic-bezier(0.2, 0, 0.2, 1), -webkit-transform 0.3s cubic-bezier(0.2, 0, 0.2, 1) 0.1s;\n  transition: opacity 0.3s cubic-bezier(0.2, 0, 0.2, 1), -webkit-transform 0.3s cubic-bezier(0.2, 0, 0.2, 1) 0.1s;\n  transition: transform 0.3s cubic-bezier(0.2, 0, 0.2, 1) 0.1s, opacity 0.3s cubic-bezier(0.2, 0, 0.2, 1);\n  transition: transform 0.3s cubic-bezier(0.2, 0, 0.2, 1) 0.1s, opacity 0.3s cubic-bezier(0.2, 0, 0.2, 1), -webkit-transform 0.3s cubic-bezier(0.2, 0, 0.2, 1) 0.1s;\n  -webkit-transform: translate3d(0, 0, 0);\n  -webkit-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n  background: #111111;\n  color: #ffffff;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  height: 100vh;\n  -webkit-box-pack: center;\n      -ms-flex-pack: center;\n          justify-content: center;\n  left: 0;\n  opacity: 0;\n  position: fixed;\n  top: 0;\n  -webkit-transform: scale(0, 0);\n          transform: scale(0, 0);\n  width: 100vw; }\n  .todo-panel.active {\n    -webkit-transition: opacity 0.3s cubic-bezier(0.2, 0, 0.2, 1) 0.1s, -webkit-transform 0.3s cubic-bezier(0.2, 0, 0.2, 1);\n    transition: opacity 0.3s cubic-bezier(0.2, 0, 0.2, 1) 0.1s, -webkit-transform 0.3s cubic-bezier(0.2, 0, 0.2, 1);\n    transition: transform 0.3s cubic-bezier(0.2, 0, 0.2, 1), opacity 0.3s cubic-bezier(0.2, 0, 0.2, 1) 0.1s;\n    transition: transform 0.3s cubic-bezier(0.2, 0, 0.2, 1), opacity 0.3s cubic-bezier(0.2, 0, 0.2, 1) 0.1s, -webkit-transform 0.3s cubic-bezier(0.2, 0, 0.2, 1);\n    -webkit-transform: translate3d(0, 0, 0);\n    opacity: 1;\n    -webkit-transform: scale(1, 1);\n            transform: scale(1, 1); }\n\n.screen-reader {\n  border: 0;\n  -webkit-clip-path: rect(0, 0, 0, 0);\n          clip-path: rect(0, 0, 0, 0);\n  height: 1px;\n  margin: -1px;\n  overflow: hidden;\n  padding: 0;\n  position: absolute;\n  width: 1px; }\n\n::-moz-selection {\n  background: #111111;\n  /* WebKit/Blink Browsers */\n  color: #ffffff; }\n\n::selection {\n  background: #111111;\n  /* WebKit/Blink Browsers */\n  color: #ffffff; }\n\n::-moz-selection {\n  background: #111111;\n  /* Gecko Browsers */\n  color: #ffffff; }\n\n/*============================================================================================================================================================================================================================================\nBlock Styles:\n============================================================================================================================================================================================================================================*/\n.header-block:first-of-type {\n  margin: 0 0 2.25rem; }\n  @media (min-width: 1024px) {\n    .header-block:first-of-type {\n      margin: 0; } }\n\n.todo {\n  -webkit-transition: opacity 0.3s cubic-bezier(0.2, 0, 0.2, 1), -webkit-transform 0.3s cubic-bezier(0.2, 0, 0.2, 1);\n  transition: opacity 0.3s cubic-bezier(0.2, 0, 0.2, 1), -webkit-transform 0.3s cubic-bezier(0.2, 0, 0.2, 1);\n  transition: transform 0.3s cubic-bezier(0.2, 0, 0.2, 1), opacity 0.3s cubic-bezier(0.2, 0, 0.2, 1);\n  transition: transform 0.3s cubic-bezier(0.2, 0, 0.2, 1), opacity 0.3s cubic-bezier(0.2, 0, 0.2, 1), -webkit-transform 0.3s cubic-bezier(0.2, 0, 0.2, 1);\n  -webkit-transform: translate3d(0, 0, 0);\n  transition: transform 0.3s cubic-bezier(0.2, 0, 0.2, 1), opacity 0.3s cubic-bezier(0.2, 0, 0.2, 1);\n  -webkit-transform: translate3d(0, 0, 0);\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-orient: vertical;\n  -webkit-box-direction: normal;\n      -ms-flex-direction: column;\n          flex-direction: column;\n  -ms-flex-wrap: wrap;\n      flex-wrap: wrap;\n  height: auto;\n  -webkit-box-pack: justify;\n      -ms-flex-pack: justify;\n          justify-content: space-between;\n  margin: 0 0 2.25rem;\n  max-height: 30rem;\n  overflow: hidden;\n  transform: translate3d(0, 0, 0);\n  width: 100%; }\n  .todo.blue {\n    color: #0074D9; }\n    .todo.blue .todo-info {\n      border-color: #0074D9; }\n    .todo.blue .todo-primary-action {\n      border-color: #0074D9; }\n      @media (min-width: 768px) {\n        .todo.blue .todo-primary-action {\n          border-color: #0074D9; } }\n    .todo.blue .button.button--primary {\n      background-color: #0074D9; }\n      .todo.blue .button.button--primary:hover, .todo.blue .button.button--primary:focus {\n        background-color: #3cb0ff; }\n    .todo.blue .button.button--secondary {\n      border-color: #0074D9;\n      color: #0074D9; }\n      .todo.blue .button.button--secondary:hover, .todo.blue .button.button--secondary:focus {\n        background-color: #0074D9;\n        color: #ffffff; }\n  .todo.green {\n    color: #008957; }\n    .todo.green .todo-info {\n      border-color: #008957; }\n    .todo.green .todo-primary-action {\n      border-color: #008957; }\n      @media (min-width: 768px) {\n        .todo.green .todo-primary-action {\n          border-color: #008957; } }\n    .todo.green .button.button--primary {\n      background-color: #008957; }\n      .todo.green .button.button--primary:hover, .todo.green .button.button--primary:focus {\n        background-color: #3cc593; }\n    .todo.green .button.button--secondary {\n      border-color: #008957;\n      color: #008957; }\n      .todo.green .button.button--secondary:hover, .todo.green .button.button--secondary:focus {\n        background-color: #008957;\n        color: #ffffff; }\n  .todo.pink {\n    color: #dc00ad; }\n    .todo.pink .todo-info {\n      border-color: #dc00ad; }\n    .todo.pink .todo-primary-action {\n      border-color: #dc00ad; }\n      @media (min-width: 768px) {\n        .todo.pink .todo-primary-action {\n          border-color: #dc00ad; } }\n    .todo.pink .button.button--primary {\n      background-color: #dc00ad; }\n      .todo.pink .button.button--primary:hover, .todo.pink .button.button--primary:focus {\n        background-color: #ff3ce9; }\n    .todo.pink .button.button--secondary {\n      border-color: #dc00ad;\n      color: #dc00ad; }\n      .todo.pink .button.button--secondary:hover, .todo.pink .button.button--secondary:focus {\n        background-color: #dc00ad;\n        color: #ffffff; }\n  .todo.purple {\n    color: #B10DC9; }\n    .todo.purple .todo-info {\n      border-color: #B10DC9; }\n    .todo.purple .todo-primary-action {\n      border-color: #B10DC9; }\n      @media (min-width: 768px) {\n        .todo.purple .todo-primary-action {\n          border-color: #B10DC9; } }\n    .todo.purple .button.button--primary {\n      background-color: #B10DC9; }\n      .todo.purple .button.button--primary:hover, .todo.purple .button.button--primary:focus {\n        background-color: #ed49ff; }\n    .todo.purple .button.button--secondary {\n      border-color: #B10DC9;\n      color: #B10DC9; }\n      .todo.purple .button.button--secondary:hover, .todo.purple .button.button--secondary:focus {\n        background-color: #B10DC9;\n        color: #ffffff; }\n  .todo:nth-of-type(100) {\n    -webkit-transition-delay: 7.65s;\n            transition-delay: 7.65s; }\n  .todo:nth-of-type(99) {\n    -webkit-transition-delay: 7.575s;\n            transition-delay: 7.575s; }\n  .todo:nth-of-type(98) {\n    -webkit-transition-delay: 7.5s;\n            transition-delay: 7.5s; }\n  .todo:nth-of-type(97) {\n    -webkit-transition-delay: 7.425s;\n            transition-delay: 7.425s; }\n  .todo:nth-of-type(96) {\n    -webkit-transition-delay: 7.35s;\n            transition-delay: 7.35s; }\n  .todo:nth-of-type(95) {\n    -webkit-transition-delay: 7.275s;\n            transition-delay: 7.275s; }\n  .todo:nth-of-type(94) {\n    -webkit-transition-delay: 7.2s;\n            transition-delay: 7.2s; }\n  .todo:nth-of-type(93) {\n    -webkit-transition-delay: 7.125s;\n            transition-delay: 7.125s; }\n  .todo:nth-of-type(92) {\n    -webkit-transition-delay: 7.05s;\n            transition-delay: 7.05s; }\n  .todo:nth-of-type(91) {\n    -webkit-transition-delay: 6.975s;\n            transition-delay: 6.975s; }\n  .todo:nth-of-type(90) {\n    -webkit-transition-delay: 6.9s;\n            transition-delay: 6.9s; }\n  .todo:nth-of-type(89) {\n    -webkit-transition-delay: 6.825s;\n            transition-delay: 6.825s; }\n  .todo:nth-of-type(88) {\n    -webkit-transition-delay: 6.75s;\n            transition-delay: 6.75s; }\n  .todo:nth-of-type(87) {\n    -webkit-transition-delay: 6.675s;\n            transition-delay: 6.675s; }\n  .todo:nth-of-type(86) {\n    -webkit-transition-delay: 6.6s;\n            transition-delay: 6.6s; }\n  .todo:nth-of-type(85) {\n    -webkit-transition-delay: 6.525s;\n            transition-delay: 6.525s; }\n  .todo:nth-of-type(84) {\n    -webkit-transition-delay: 6.45s;\n            transition-delay: 6.45s; }\n  .todo:nth-of-type(83) {\n    -webkit-transition-delay: 6.375s;\n            transition-delay: 6.375s; }\n  .todo:nth-of-type(82) {\n    -webkit-transition-delay: 6.3s;\n            transition-delay: 6.3s; }\n  .todo:nth-of-type(81) {\n    -webkit-transition-delay: 6.225s;\n            transition-delay: 6.225s; }\n  .todo:nth-of-type(80) {\n    -webkit-transition-delay: 6.15s;\n            transition-delay: 6.15s; }\n  .todo:nth-of-type(79) {\n    -webkit-transition-delay: 6.075s;\n            transition-delay: 6.075s; }\n  .todo:nth-of-type(78) {\n    -webkit-transition-delay: 6s;\n            transition-delay: 6s; }\n  .todo:nth-of-type(77) {\n    -webkit-transition-delay: 5.925s;\n            transition-delay: 5.925s; }\n  .todo:nth-of-type(76) {\n    -webkit-transition-delay: 5.85s;\n            transition-delay: 5.85s; }\n  .todo:nth-of-type(75) {\n    -webkit-transition-delay: 5.775s;\n            transition-delay: 5.775s; }\n  .todo:nth-of-type(74) {\n    -webkit-transition-delay: 5.7s;\n            transition-delay: 5.7s; }\n  .todo:nth-of-type(73) {\n    -webkit-transition-delay: 5.625s;\n            transition-delay: 5.625s; }\n  .todo:nth-of-type(72) {\n    -webkit-transition-delay: 5.55s;\n            transition-delay: 5.55s; }\n  .todo:nth-of-type(71) {\n    -webkit-transition-delay: 5.475s;\n            transition-delay: 5.475s; }\n  .todo:nth-of-type(70) {\n    -webkit-transition-delay: 5.4s;\n            transition-delay: 5.4s; }\n  .todo:nth-of-type(69) {\n    -webkit-transition-delay: 5.325s;\n            transition-delay: 5.325s; }\n  .todo:nth-of-type(68) {\n    -webkit-transition-delay: 5.25s;\n            transition-delay: 5.25s; }\n  .todo:nth-of-type(67) {\n    -webkit-transition-delay: 5.175s;\n            transition-delay: 5.175s; }\n  .todo:nth-of-type(66) {\n    -webkit-transition-delay: 5.1s;\n            transition-delay: 5.1s; }\n  .todo:nth-of-type(65) {\n    -webkit-transition-delay: 5.025s;\n            transition-delay: 5.025s; }\n  .todo:nth-of-type(64) {\n    -webkit-transition-delay: 4.95s;\n            transition-delay: 4.95s; }\n  .todo:nth-of-type(63) {\n    -webkit-transition-delay: 4.875s;\n            transition-delay: 4.875s; }\n  .todo:nth-of-type(62) {\n    -webkit-transition-delay: 4.8s;\n            transition-delay: 4.8s; }\n  .todo:nth-of-type(61) {\n    -webkit-transition-delay: 4.725s;\n            transition-delay: 4.725s; }\n  .todo:nth-of-type(60) {\n    -webkit-transition-delay: 4.65s;\n            transition-delay: 4.65s; }\n  .todo:nth-of-type(59) {\n    -webkit-transition-delay: 4.575s;\n            transition-delay: 4.575s; }\n  .todo:nth-of-type(58) {\n    -webkit-transition-delay: 4.5s;\n            transition-delay: 4.5s; }\n  .todo:nth-of-type(57) {\n    -webkit-transition-delay: 4.425s;\n            transition-delay: 4.425s; }\n  .todo:nth-of-type(56) {\n    -webkit-transition-delay: 4.35s;\n            transition-delay: 4.35s; }\n  .todo:nth-of-type(55) {\n    -webkit-transition-delay: 4.275s;\n            transition-delay: 4.275s; }\n  .todo:nth-of-type(54) {\n    -webkit-transition-delay: 4.2s;\n            transition-delay: 4.2s; }\n  .todo:nth-of-type(53) {\n    -webkit-transition-delay: 4.125s;\n            transition-delay: 4.125s; }\n  .todo:nth-of-type(52) {\n    -webkit-transition-delay: 4.05s;\n            transition-delay: 4.05s; }\n  .todo:nth-of-type(51) {\n    -webkit-transition-delay: 3.975s;\n            transition-delay: 3.975s; }\n  .todo:nth-of-type(50) {\n    -webkit-transition-delay: 3.9s;\n            transition-delay: 3.9s; }\n  .todo:nth-of-type(49) {\n    -webkit-transition-delay: 3.825s;\n            transition-delay: 3.825s; }\n  .todo:nth-of-type(48) {\n    -webkit-transition-delay: 3.75s;\n            transition-delay: 3.75s; }\n  .todo:nth-of-type(47) {\n    -webkit-transition-delay: 3.675s;\n            transition-delay: 3.675s; }\n  .todo:nth-of-type(46) {\n    -webkit-transition-delay: 3.6s;\n            transition-delay: 3.6s; }\n  .todo:nth-of-type(45) {\n    -webkit-transition-delay: 3.525s;\n            transition-delay: 3.525s; }\n  .todo:nth-of-type(44) {\n    -webkit-transition-delay: 3.45s;\n            transition-delay: 3.45s; }\n  .todo:nth-of-type(43) {\n    -webkit-transition-delay: 3.375s;\n            transition-delay: 3.375s; }\n  .todo:nth-of-type(42) {\n    -webkit-transition-delay: 3.3s;\n            transition-delay: 3.3s; }\n  .todo:nth-of-type(41) {\n    -webkit-transition-delay: 3.225s;\n            transition-delay: 3.225s; }\n  .todo:nth-of-type(40) {\n    -webkit-transition-delay: 3.15s;\n            transition-delay: 3.15s; }\n  .todo:nth-of-type(39) {\n    -webkit-transition-delay: 3.075s;\n            transition-delay: 3.075s; }\n  .todo:nth-of-type(38) {\n    -webkit-transition-delay: 3s;\n            transition-delay: 3s; }\n  .todo:nth-of-type(37) {\n    -webkit-transition-delay: 2.925s;\n            transition-delay: 2.925s; }\n  .todo:nth-of-type(36) {\n    -webkit-transition-delay: 2.85s;\n            transition-delay: 2.85s; }\n  .todo:nth-of-type(35) {\n    -webkit-transition-delay: 2.775s;\n            transition-delay: 2.775s; }\n  .todo:nth-of-type(34) {\n    -webkit-transition-delay: 2.7s;\n            transition-delay: 2.7s; }\n  .todo:nth-of-type(33) {\n    -webkit-transition-delay: 2.625s;\n            transition-delay: 2.625s; }\n  .todo:nth-of-type(32) {\n    -webkit-transition-delay: 2.55s;\n            transition-delay: 2.55s; }\n  .todo:nth-of-type(31) {\n    -webkit-transition-delay: 2.475s;\n            transition-delay: 2.475s; }\n  .todo:nth-of-type(30) {\n    -webkit-transition-delay: 2.4s;\n            transition-delay: 2.4s; }\n  .todo:nth-of-type(29) {\n    -webkit-transition-delay: 2.325s;\n            transition-delay: 2.325s; }\n  .todo:nth-of-type(28) {\n    -webkit-transition-delay: 2.25s;\n            transition-delay: 2.25s; }\n  .todo:nth-of-type(27) {\n    -webkit-transition-delay: 2.175s;\n            transition-delay: 2.175s; }\n  .todo:nth-of-type(26) {\n    -webkit-transition-delay: 2.1s;\n            transition-delay: 2.1s; }\n  .todo:nth-of-type(25) {\n    -webkit-transition-delay: 2.025s;\n            transition-delay: 2.025s; }\n  .todo:nth-of-type(24) {\n    -webkit-transition-delay: 1.95s;\n            transition-delay: 1.95s; }\n  .todo:nth-of-type(23) {\n    -webkit-transition-delay: 1.875s;\n            transition-delay: 1.875s; }\n  .todo:nth-of-type(22) {\n    -webkit-transition-delay: 1.8s;\n            transition-delay: 1.8s; }\n  .todo:nth-of-type(21) {\n    -webkit-transition-delay: 1.725s;\n            transition-delay: 1.725s; }\n  .todo:nth-of-type(20) {\n    -webkit-transition-delay: 1.65s;\n            transition-delay: 1.65s; }\n  .todo:nth-of-type(19) {\n    -webkit-transition-delay: 1.575s;\n            transition-delay: 1.575s; }\n  .todo:nth-of-type(18) {\n    -webkit-transition-delay: 1.5s;\n            transition-delay: 1.5s; }\n  .todo:nth-of-type(17) {\n    -webkit-transition-delay: 1.425s;\n            transition-delay: 1.425s; }\n  .todo:nth-of-type(16) {\n    -webkit-transition-delay: 1.35s;\n            transition-delay: 1.35s; }\n  .todo:nth-of-type(15) {\n    -webkit-transition-delay: 1.275s;\n            transition-delay: 1.275s; }\n  .todo:nth-of-type(14) {\n    -webkit-transition-delay: 1.2s;\n            transition-delay: 1.2s; }\n  .todo:nth-of-type(13) {\n    -webkit-transition-delay: 1.125s;\n            transition-delay: 1.125s; }\n  .todo:nth-of-type(12) {\n    -webkit-transition-delay: 1.05s;\n            transition-delay: 1.05s; }\n  .todo:nth-of-type(11) {\n    -webkit-transition-delay: 0.975s;\n            transition-delay: 0.975s; }\n  .todo:nth-of-type(10) {\n    -webkit-transition-delay: 0.9s;\n            transition-delay: 0.9s; }\n  .todo:nth-of-type(9) {\n    -webkit-transition-delay: 0.825s;\n            transition-delay: 0.825s; }\n  .todo:nth-of-type(8) {\n    -webkit-transition-delay: 0.75s;\n            transition-delay: 0.75s; }\n  .todo:nth-of-type(7) {\n    -webkit-transition-delay: 0.675s;\n            transition-delay: 0.675s; }\n  .todo:nth-of-type(6) {\n    -webkit-transition-delay: 0.6s;\n            transition-delay: 0.6s; }\n  .todo:nth-of-type(5) {\n    -webkit-transition-delay: 0.525s;\n            transition-delay: 0.525s; }\n  .todo:nth-of-type(4) {\n    -webkit-transition-delay: 0.45s;\n            transition-delay: 0.45s; }\n  .todo:nth-of-type(3) {\n    -webkit-transition-delay: 0.375s;\n            transition-delay: 0.375s; }\n  .todo:nth-of-type(2) {\n    -webkit-transition-delay: 0.3s;\n            transition-delay: 0.3s; }\n  .todo:nth-of-type(1) {\n    -webkit-transition-delay: 0.225s;\n            transition-delay: 0.225s; }\n  @media (min-width: 768px) {\n    .todo {\n      -webkit-box-orient: horizontal;\n      -webkit-box-direction: normal;\n          -ms-flex-direction: row;\n              flex-direction: row; } }\n  @media (min-width: 1024px) {\n    .todo {\n      max-height: 15rem; } }\n  .todo.todo-list-enter {\n    opacity: 0;\n    -webkit-transform: translateX(-15%);\n            transform: translateX(-15%); }\n  .todo.todo-list-enter-active {\n    opacity: 1;\n    -webkit-transform: translateX(0%);\n            transform: translateX(0%); }\n  .todo.todo-list-leave {\n    opacity: 1;\n    -webkit-transform: translateX(0%);\n            transform: translateX(0%); }\n  .todo.todo-list-leave-active {\n    opacity: 0;\n    -webkit-transform: translateX(15%);\n            transform: translateX(15%); }\n  .todo-info {\n    border: 2px solid #111111;\n    padding: 1rem;\n    min-height: 1px;\n    width: 100%; }\n    @media (min-width: 768px) {\n      .todo-info {\n        width: 75%; } }\n    @media (min-width: 1280px) {\n      .todo-info {\n        width: 85%; } }\n  .todo-primary-action {\n    border: 2px solid #111111;\n    border-top: none;\n    display: -webkit-box;\n    display: -ms-flexbox;\n    display: flex; }\n    @media (min-width: 768px) {\n      .todo-primary-action {\n        border-top: 2px solid #111111;\n        border-left: none;\n        width: 25%; } }\n    @media (min-width: 1280px) {\n      .todo-primary-action {\n        width: 15%; } }\n\n.message {\n  -webkit-transition: max-height 0.3s cubic-bezier(0.2, 0, 0.2, 1);\n  transition: max-height 0.3s cubic-bezier(0.2, 0, 0.2, 1);\n  -webkit-transform: translate3d(0, 0, 0);\n  height: auto;\n  max-height: 0rem;\n  overflow: hidden;\n  visibility: hidden;\n  width: 100%; }\n  .message--urgent {\n    background: #e91f00; }\n  .message--sucess {\n    background: #008957; }\n  .message.active {\n    max-height: 5rem;\n    visibility: visible; }\n  .message p {\n    color: #ffffff;\n    display: block;\n    font-size: 1rem;\n    font-weight: 700;\n    padding: 0.44444rem;\n    text-align: center; }\n\n.todo-due-date {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-orient: horizontal;\n  -webkit-box-direction: normal;\n      -ms-flex-direction: row;\n          flex-direction: row;\n  -ms-flex-pack: distribute;\n      justify-content: space-around;\n  margin: 0 0 5.0625rem;\n  width: 100%; }\n  .todo-due-date.error {\n    background: #e91f00; }\n  .todo-due-date label {\n    font-size: 1.5rem;\n    position: relative;\n    width: calc(100% - 6rem);\n    z-index: 100; }\n    .todo-due-date label[for=\"todo-due-day\"] {\n      width: 6rem; }\n    .todo-due-date label .text {\n      display: block;\n      margin: 0 0 0.19753rem; }\n  .todo-due-date label:before {\n    border-style: solid;\n    border-width: .25rem .25rem 0 .25rem;\n    border-color: #111111 transparent transparent;\n    bottom: 1.2rem;\n    content: '';\n    height: 0;\n    position: absolute;\n    right: 8%;\n    width: 0; }\n\n.footer-copyright {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-pack: justify;\n      -ms-flex-pack: justify;\n          justify-content: space-between; }\n\n/*============================================================================================================================================================================================================================================\nElement Styles:\n============================================================================================================================================================================================================================================*/\n.header-block__logo {\n  font-size: 3.375rem;\n  font-weight: 700;\n  line-height: 1; }\n", ""]);
 
 // exports
 
@@ -22151,6 +22151,8 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
 var _react = __webpack_require__(80);
 
 var _react2 = _interopRequireDefault(_react);
@@ -22181,171 +22183,208 @@ var _TodoForm2 = _interopRequireDefault(_TodoForm);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; } // react junk
+
 // componenets
+
+
 var base = _reBase2.default.createClass('https://todo33.firebaseio.com/');
 
-var App = _react2.default.createClass({
-  displayName: 'App',
+var App = function (_Component) {
+  _inherits(App, _Component);
 
+  function App(props) {
+    _classCallCheck(this, App);
 
-  getInitialState: function getInitialState() {
-    return {
+    var _this = _possibleConstructorReturn(this, (App.__proto__ || Object.getPrototypeOf(App)).call(this, props));
+
+    _this.state = {
       todos: {},
       complete: {},
       editTodoId: null,
       todoFormActive: false,
       completeActive: false
     };
-  },
-
-  componentDidMount: function componentDidMount() {
-    base.syncState('/complete', {
-      context: this,
-      state: 'complete'
-    });
-
-    base.syncState('/todos', {
-      context: this,
-      state: 'todos'
-    });
-  },
-
-  // todo actions
-  addTodo: function addTodo(todo) {
-    var timeStamp = new Date().getTime();
-    this.state.todos['todo-' + timeStamp] = todo;
-    this.setState({
-      todos: this.state.todos
-    });
-  },
-
-  editTodo: function editTodo(todo) {
-    var todoId = this.state.editTodoId;
-    this.state.todos[todoId].title = todo.title;
-    this.state.todos[todoId].due_date = todo.due_date;
-    this.state.todos[todoId].overdue = false;
-    this.setState({
-      todos: this.state.todos
-    });
-  },
-
-  overdueTodo: function overdueTodo(key) {
-    this.state.todos[key].overdue = true;
-    this.setState({
-      todos: this.state.todos
-    });
-  },
-
-  deleteTodo: function deleteTodo(key) {
-    var list = this.state.completeActive ? this.state.complete : this.state.todos;
-    list[key] = null;
-
-    if (this.state.completeActive) {
-      this.setState({
-        complete: this.state.complete
-      });
-    } else {
-      this.setState({
-        todos: this.state.todos
-      });
-    }
-  },
-
-  primaryActionTodo: function primaryActionTodo(key) {
-    // if the completed todos are active set oldList to the state.complete else state.todos
-    var oldList = this.state.completeActive ? this.state.complete : this.state.todos;
-    // if the completed todos are active set newList to the state.todos else state.complete
-    var newList = !this.state.completeActive ? this.state.complete : this.state.todos;
-    /*
-    if the completed todos are active set the todoName to todo- since we are moving the todo from state.complete to state.todo
-    */
-    var todoName = this.state.completeActive ? 'todo-' : 'complete-';
-    // saving the todo object off in a temp variable
-    var tempTodo = oldList[key];
-    var timeStamp = new Date().getTime();
-
-    // switching the complete flag to the opisite
-    tempTodo.complete = !tempTodo.complete;
-    // adding the temp todo to the state with the right name and timestamp as an ID
-    newList[todoName + timeStamp] = tempTodo;
-
-    // updating state with the moved todo
-    if (!this.state.completeActive) {
-      this.setState({
-        complete: this.state.complete
-      });
-    } else {
-      this.setState({
-        todos: this.state.todos
-      });
-    }
-
-    // deleting the old todo from state
-    this.deleteTodo(key);
-  },
-
-  // this opens and closes the Todo Form component
-  toggleTodoForm: function toggleTodoForm() {
-    var key = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : null;
-
-    this.setState({
-      editTodoId: key,
-      todoFormActive: !this.state.todoFormActive
-    });
-  },
-
-  // loading in completed todos
-  toggleTodosList: function toggleTodosList() {
-    this.state.completeActive = !this.state.completeActive;
-    this.setState({
-      completeActive: this.state.completeActive
-    });
-  },
-
-  // sorting datalsit
-  // sortDataList : function(key) {
-  //   var tempArr = new Array();
-  //   tempArr.push(this.state.todos[key]);
-
-  //   return tempArr;
-  // },
-
-  // render functions
-  renderTodo: function renderTodo(key) {
-    var data = this.state.completeActive ? this.state.complete[key] : this.state.todos[key];
-
-    return _react2.default.createElement(_Todo2.default, { key: key, index: key, data: data, overdueTodo: this.overdueTodo, deleteTodo: this.deleteTodo, primaryActionTodo: this.primaryActionTodo, toggleTodoForm: this.toggleTodoForm });
-  },
-
-  render: function render() {
-    var dataList = this.state.completeActive ? this.state.complete : this.state.todos;
-
-    return _react2.default.createElement(
-      'div',
-      null,
-      _react2.default.createElement(_Header2.default, { toggleTodoForm: this.toggleTodoForm, toggleTodosList: this.toggleTodosList, completeActive: this.state.completeActive }),
-      _react2.default.createElement(
-        _reactAddonsCssTransitionGroup2.default,
-        { id: 'todo-list', className: 'todo-list', component: 'main', transitionName: 'todo-list', transitionEnterTimeout: 2000, transitionLeaveTimeout: 2000 },
-        Object.keys(dataList).map(this.renderTodo)
-      ),
-      _react2.default.createElement(
-        'button',
-        { className: 'button button--primary', onClick: this.loadSamples },
-        'Load Sample Data'
-      ),
-      _react2.default.createElement(_Footer2.default, null),
-      _react2.default.createElement(_TodoForm2.default, { isActive: this.state.todoFormActive, editTodoId: this.state.editTodoId, todos: this.state.todos, toggleTodoForm: this.toggleTodoForm, editTodo: this.editTodo, addTodo: this.addTodo })
-    );
-  },
-
-  loadSamples: function loadSamples() {
-    this.setState({
-      todos: __webpack_require__(190),
-      complete: __webpack_require__(189)
-    });
+    return _this;
   }
-});
+
+  _createClass(App, [{
+    key: 'componentDidMount',
+    value: function componentDidMount() {
+      base.syncState('/complete', {
+        context: this,
+        state: 'complete'
+      });
+
+      base.syncState('/todos', {
+        context: this,
+        state: 'todos'
+      });
+    }
+
+    // todo actions
+
+  }, {
+    key: 'addTodo',
+    value: function addTodo(todo) {
+      var timeStamp = new Date().getTime();
+      this.state.todos['todo-' + timeStamp] = todo;
+      this.setState({
+        todos: this.state.todos
+      });
+    }
+  }, {
+    key: 'editTodo',
+    value: function editTodo(todo) {
+      var todoId = this.state.editTodoId;
+      this.state.todos[todoId].title = todo.title;
+      this.state.todos[todoId].due_date = todo.due_date;
+      this.state.todos[todoId].overdue = false;
+      this.setState({
+        todos: this.state.todos
+      });
+    }
+  }, {
+    key: 'overdueTodo',
+    value: function overdueTodo(key) {
+      this.state.todos[key].overdue = true;
+      this.setState({
+        todos: this.state.todos
+      });
+    }
+  }, {
+    key: 'deleteTodo',
+    value: function deleteTodo(key) {
+      var list = this.state.completeActive ? this.state.complete : this.state.todos;
+      list[key] = null;
+
+      if (this.state.completeActive) {
+        this.setState({
+          complete: this.state.complete
+        });
+      } else {
+        this.setState({
+          todos: this.state.todos
+        });
+      }
+    }
+  }, {
+    key: 'primaryActionTodo',
+    value: function primaryActionTodo(key) {
+      // if the completed todos are active set oldList to the state.complete else state.todos
+      var oldList = this.state.completeActive ? this.state.complete : this.state.todos;
+      // if the completed todos are active set newList to the state.todos else state.complete
+      var newList = !this.state.completeActive ? this.state.complete : this.state.todos;
+      /*
+      if the completed todos are active set the todoName to todo- since we are moving the todo from state.complete to state.todo
+      */
+      var todoName = this.state.completeActive ? 'todo-' : 'complete-';
+      // saving the todo object off in a temp variable
+      var tempTodo = oldList[key];
+      var timeStamp = new Date().getTime();
+
+      // switching the complete flag to the opisite
+      tempTodo.complete = !tempTodo.complete;
+      // adding the temp todo to the state with the right name and timestamp as an ID
+      newList[todoName + timeStamp] = tempTodo;
+
+      // updating state with the moved todo
+      if (!this.state.completeActive) {
+        this.setState({
+          complete: this.state.complete
+        });
+      } else {
+        this.setState({
+          todos: this.state.todos
+        });
+      }
+
+      // deleting the old todo from state
+      this.deleteTodo(key);
+    }
+
+    // this opens and closes the Todo Form component
+
+  }, {
+    key: 'toggleTodoForm',
+    value: function toggleTodoForm() {
+      var key = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : null;
+
+      this.setState({
+        editTodoId: key,
+        todoFormActive: !this.state.todoFormActive
+      });
+    }
+
+    // loading in completed todos
+
+  }, {
+    key: 'toggleTodosList',
+    value: function toggleTodosList() {
+      this.state.completeActive = !this.state.completeActive;
+      this.setState({
+        completeActive: this.state.completeActive
+      });
+    }
+
+    // sorting datalsit
+    // sortDataList(key) {
+    //   var tempArr = new Array();
+    //   tempArr.push(this.state.todos[key]);
+
+    //   return tempArr;
+    // }
+
+    // render functions
+
+  }, {
+    key: 'renderTodo',
+    value: function renderTodo(key) {
+      var data = this.state.completeActive ? this.state.complete[key] : this.state.todos[key];
+
+      return _react2.default.createElement(_Todo2.default, { key: key, index: key, data: data, overdueTodo: this.overdueTodo.bind(this), deleteTodo: this.deleteTodo.bind(this), primaryActionTodo: this.primaryActionTodo.bind(this), toggleTodoForm: this.toggleTodoForm.bind(this) });
+    }
+  }, {
+    key: 'render',
+    value: function render() {
+      var dataList = this.state.completeActive ? this.state.complete : this.state.todos;
+
+      return _react2.default.createElement(
+        'div',
+        null,
+        _react2.default.createElement(_Header2.default, { toggleTodoForm: this.toggleTodoForm.bind(this), toggleTodosList: this.toggleTodosList.bind(this), completeActive: this.state.completeActive }),
+        _react2.default.createElement(
+          _reactAddonsCssTransitionGroup2.default,
+          { id: 'todo-list', className: 'todo-list', component: 'main', transitionName: 'todo-list', transitionEnterTimeout: 2000, transitionLeaveTimeout: 2000 },
+          Object.keys(dataList).map(this.renderTodo.bind(this))
+        ),
+        _react2.default.createElement(
+          'button',
+          { className: 'button button--primary', onClick: this.loadSamples.bind(this) },
+          'Load Sample Data'
+        ),
+        _react2.default.createElement(_Footer2.default, null),
+        _react2.default.createElement(_TodoForm2.default, { isActive: this.state.todoFormActive, editTodoId: this.state.editTodoId, todos: this.state.todos, toggleTodoForm: this.toggleTodoForm.bind(this), editTodo: this.editTodo.bind(this), addTodo: this.addTodo.bind(this) })
+      );
+    }
+  }, {
+    key: 'loadSamples',
+    value: function loadSamples() {
+      this.setState({
+        todos: __webpack_require__(190),
+        complete: __webpack_require__(189)
+      });
+    }
+  }]);
+
+  return App;
+}(_react.Component);
+
+;
 
 exports.default = App;
 
@@ -22532,7 +22571,7 @@ var Todo = _react2.default.createClass({
     if (todo.complete) {
       return _react2.default.createElement(
         'div',
-        { tabindex: '0', className: 'todo complete blue' },
+        { className: 'todo complete blue' },
         _react2.default.createElement(
           'div',
           { className: 'todo-info' },
@@ -22566,7 +22605,7 @@ var Todo = _react2.default.createClass({
 
     return _react2.default.createElement(
       'div',
-      { tabindex: '0', className: 'todo pink' },
+      { className: 'todo pink' },
       _react2.default.createElement(
         'div',
         { className: overdueClasses },
@@ -22859,10 +22898,10 @@ var TodoForm = _react2.default.createClass({
       { className: formClasses, 'aria-hidden': this.props.isActive, 'aria-expanded': this.props.isActive },
       _react2.default.createElement(
         'form',
-        { className: 'todo-form', ref: 'todoForm', id: 'todo-form', tabindex: '1', 'aria-label': 'New Todo Form', onSubmit: this.validateForm, autocomplete: 'off' },
+        { className: 'todo-form', ref: 'todoForm', id: 'todo-form', tabIndex: '1', 'aria-label': 'New Todo Form', onSubmit: this.validateForm, autoComplete: 'off' },
         _react2.default.createElement(
           'label',
-          { 'for': 'todo-title' },
+          { htmlFor: 'todo-title' },
           'ToDo:'
         ),
         _react2.default.createElement(
@@ -22897,7 +22936,7 @@ var TodoForm = _react2.default.createClass({
             { className: dateClasses, id: 'todo-due-date' },
             _react2.default.createElement(
               'label',
-              { 'for': 'todo-due-month' },
+              { htmlFor: 'todo-due-month' },
               _react2.default.createElement(
                 'span',
                 { className: 'text' },
@@ -22970,7 +23009,7 @@ var TodoForm = _react2.default.createClass({
             ),
             _react2.default.createElement(
               'label',
-              { 'for': 'todo-due-day' },
+              { htmlFor: 'todo-due-day' },
               _react2.default.createElement(
                 'span',
                 { className: 'text' },
@@ -23138,7 +23177,7 @@ var TodoForm = _react2.default.createClass({
             ),
             _react2.default.createElement(
               'label',
-              { 'for': 'todo-due-year' },
+              { htmlFor: 'todo-due-year' },
               _react2.default.createElement(
                 'span',
                 { className: 'text' },

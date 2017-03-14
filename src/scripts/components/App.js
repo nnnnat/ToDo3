@@ -1,8 +1,7 @@
-import React from 'react';
+// react junk
+import React, { Component, PropTypes } from 'react';
 import CSSTransition from 'react-addons-css-transition-group';
 import Rebase from 're-base';
-
-
 // componenets
 import Header from './Header';
 import Todo from './Todo';
@@ -11,19 +10,19 @@ import TodoForm from './TodoForm';
 
 const base = Rebase.createClass('https://todo33.firebaseio.com/');
 
-const App = React.createClass({
-
-  getInitialState : function() {
-    return {
+class App extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
       todos : {},
       complete : {},
       editTodoId : null,
       todoFormActive : false,
       completeActive : false
     };
-  },
+  }
 
-  componentDidMount : function() {
+  componentDidMount() {
     base.syncState('/complete', {
       context : this,
       state : 'complete'
@@ -33,18 +32,18 @@ const App = React.createClass({
       context : this,
       state : 'todos'
     });
-  },
+  }
 
   // todo actions
-  addTodo : function(todo) {
+  addTodo(todo) {
     var timeStamp = (new Date()).getTime();
     this.state.todos['todo-' + timeStamp] = todo;
     this.setState({
       todos : this.state.todos
     });
-  },
+  }
 
-  editTodo : function(todo) {
+  editTodo(todo) {
     var todoId = this.state.editTodoId;
     this.state.todos[todoId].title = todo.title;
     this.state.todos[todoId].due_date = todo.due_date;
@@ -52,16 +51,16 @@ const App = React.createClass({
     this.setState({
       todos : this.state.todos
     });
-  },
+  }
 
-  overdueTodo : function(key) {
+  overdueTodo(key) {
     this.state.todos[key].overdue = true;
     this.setState({
       todos : this.state.todos
     });
-  },
+  }
 
-  deleteTodo : function(key) {
+  deleteTodo(key) {
     var list = (this.state.completeActive ? this.state.complete : this.state.todos);
     list[key] = null;
 
@@ -74,9 +73,9 @@ const App = React.createClass({
         todos : this.state.todos
       });
     }
-  },
+  }
 
-  primaryActionTodo : function(key) {
+  primaryActionTodo(key) {
     // if the completed todos are active set oldList to the state.complete else state.todos
     var oldList = (this.state.completeActive ? this.state.complete : this.state.todos);
     // if the completed todos are active set newList to the state.todos else state.complete
@@ -107,68 +106,68 @@ const App = React.createClass({
 
     // deleting the old todo from state
     this.deleteTodo(key);
-  },
+  }
 
   // this opens and closes the Todo Form component
-  toggleTodoForm : function(key = null) {
+  toggleTodoForm(key = null) {
     this.setState({
       editTodoId : key,
       todoFormActive : !this.state.todoFormActive
     });
-  },
+  }
 
   // loading in completed todos
-  toggleTodosList : function() {
+  toggleTodosList() {
     this.state.completeActive = !this.state.completeActive;
     this.setState({
       completeActive : this.state.completeActive
     });
-  },
+  }
 
   // sorting datalsit
-  // sortDataList : function(key) {
+  // sortDataList(key) {
   //   var tempArr = new Array();
   //   tempArr.push(this.state.todos[key]);
 
   //   return tempArr;
-  // },
+  // }
 
   // render functions
-  renderTodo : function(key) {
+  renderTodo(key) {
     var data = (this.state.completeActive ? this.state.complete[key] : this.state.todos[key]);
 
-    return <Todo key={key} index={key} data={data} overdueTodo={this.overdueTodo} deleteTodo={this.deleteTodo} primaryActionTodo={this.primaryActionTodo} toggleTodoForm={this.toggleTodoForm} />;
-  },
+    return <Todo key={key} index={key} data={data} overdueTodo={this.overdueTodo.bind(this)} deleteTodo={this.deleteTodo.bind(this)} primaryActionTodo={this.primaryActionTodo.bind(this)} toggleTodoForm={this.toggleTodoForm.bind(this)} />;
+  }
 
-  render : function() {
+  render() {
     var dataList = (this.state.completeActive ? this.state.complete : this.state.todos);
 
     return (
       <div>
-        <Header toggleTodoForm={this.toggleTodoForm} toggleTodosList={this.toggleTodosList} completeActive={this.state.completeActive} />
+        <Header toggleTodoForm={this.toggleTodoForm.bind(this)} toggleTodosList={this.toggleTodosList.bind(this)} completeActive={this.state.completeActive} />
 
         <CSSTransition id="todo-list" className="todo-list" component="main" transitionName="todo-list" transitionEnterTimeout={2000} transitionLeaveTimeout={2000}>
 
-          { Object.keys(dataList).map(this.renderTodo) }
+          { Object.keys(dataList).map(this.renderTodo.bind(this)) }
 
         </CSSTransition>
 
-        <button className="button button--primary" onClick={this.loadSamples}>Load Sample Data</button>
+        <button className="button button--primary" onClick={this.loadSamples.bind(this)}>Load Sample Data</button>
 
         <Footer />
 
-        <TodoForm isActive={this.state.todoFormActive} editTodoId={this.state.editTodoId} todos={this.state.todos} toggleTodoForm={this.toggleTodoForm} editTodo={this.editTodo} addTodo={this.addTodo} />
+        <TodoForm isActive={this.state.todoFormActive} editTodoId={this.state.editTodoId} todos={this.state.todos} toggleTodoForm={this.toggleTodoForm.bind(this)} editTodo={this.editTodo.bind(this)} addTodo={this.addTodo.bind(this)} />
 
       </div>
     );
-  },
+  }
 
-  loadSamples : function() {
+  loadSamples() {
     this.setState({
       todos : require('../sample-todos.js'),
       complete : require('../sample-complete.js')
     });
-  },
-});
+  }
+};
 
 export default App;

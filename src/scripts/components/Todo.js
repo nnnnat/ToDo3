@@ -57,7 +57,7 @@ const Todo = React.createClass({
 
     if(todo.complete) {
       return (
-        <div tabindex="0" className="todo complete blue">
+        <div className="todo complete blue">
           <div className="todo-info">
             <h2 className="todo-info__title">Due: <span className="text">{h.prettyDate(todo.due_date)}</span></h2>
             <h3 className="todo-info__title">{todo.title}</h3>
@@ -71,7 +71,7 @@ const Todo = React.createClass({
 
     return (
 
-      <div tabindex="0" className="todo pink">
+      <div className="todo pink">
         <div className={overdueClasses}>
           <p>This ToDo is OverDo!</p>
         </div>
